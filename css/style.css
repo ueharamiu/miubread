@@ -1,0 +1,1883 @@
+@charset "UTF-8";
+
+
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  color: #31251c;
+}
+
+.text1 {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0px 10px;
+}
+
+.text2 {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px 0px 10px;
+}
+
+figcaption {
+  font-size: 14px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ボタン */
+.button {
+  font-size: 0.75rem;
+  background-color: #b7ccb2;
+  color: #31251c;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+.button:hover {
+  background-color: #A0B39B;
+  transition: all 0.5s ease;
+}
+
+
+/* HEADER
+-----------------------------*/
+#header {
+  width: 1280px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  /* background-color: #4682b4; */
+}
+
+#header nav {
+  display: flex; /* ロゴとメニューを並列に */
+  justify-content: space-between; /* ロゴとナビをそれぞれ両端に */
+  height: 100px;
+}
+
+#header nav::after {
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1280px;
+  height: 2px;
+  border-radius: 9px;
+  top: 100px;
+}
+
+#header .logo {
+  width: 80px;
+  height: 80px;
+  margin: 10px 10px 10px 20px;
+}
+
+ul.main-nav {
+  display: flex;
+  align-items: center; /* ナビを中央に揃える */
+  list-style: none;
+  margin: 0; /* ブラウザ固有のmarginを消す←リセット系のcss入れれば大体消える */
+  height: 100px;
+  position: relative;
+}
+
+ul.main-nav li::before {
+  content: '';
+  position: absolute;
+  background-color: #b7ccb2;
+  width: 3px;
+  height: 60px;
+  border-radius: 9px;
+  top: 20px;
+}
+
+ul.main-nav li:nth-child(1)::before {
+  content: none;
+}
+
+.main-nav li a {
+  color: #31251c;
+  padding: 40px 40px 44px;
+}
+
+.main-nav li a:hover {
+  color: #d0d0d0;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+
+/* CONTENTS
+----------------------------- */
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.h2 {
+  text-align: center;
+}
+
+
+/* お知らせ */
+.post-info {
+  width: 1040px;
+  height: 110px;
+  padding: 10px 20px 30px;
+  margin-bottom: 10px;
+  position: relative;
+  /* background-color: #F57553; */
+}
+
+.post-info::before {
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: 154px;
+  left: 0;
+}
+
+.post-title {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 30px;
+  position: relative;
+}
+
+.post-title::after {
+  content: '';
+  position: absolute;
+  background-color: #b7ccb2;
+  width: 100px;
+  height: 3px;
+  border-radius: 9px;
+  top: 32px;
+  left: 45%;
+  display: inline-block;
+}
+
+
+/* こだわり、お店の特徴の親要素 */
+.f-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* こだわり */
+.commitment {
+  width: 515px;
+  height: 160px;
+  padding: 10px 10px 30px;
+  /* background-color: #F5A053; */
+}
+
+.commitment-title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.commitment-title::after {
+  content: '';
+  position: absolute;
+  background-color: #b7ccb2;
+  width: 100px;
+  height: 3px;
+  border-radius: 9px;
+  top: 32px;
+  left: 205px;
+  display: inline-block;
+}
+
+
+/* お店の特徴 */
+.point {
+  width: 515px;
+  height: 160px;
+  padding: 10px 10px 30px;
+  margin-left: 10px;
+  /* background-color: #F5C553; */
+}
+
+.point-title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.point-title::after {
+  content: '';
+  position: absolute;
+  background-color: #b7ccb2;
+  width: 140px;
+  height: 3px;
+  border-radius: 9px;
+  top: 32px;
+  left: 185px;
+  display: inline-block;
+}
+
+
+/* 商品メニュー */
+.menu-wrapper-grid {
+  width: 1080px;
+  height: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #9B826C;
+  position: relative;
+}
+
+.menu-wrapper-grid::before { /* 上に灰色の横線を配置 */
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: -6px;
+  left: 0;
+}
+
+.menu-box {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.menu-title {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 26px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.menu-images {
+  display: flex;
+  align-items: center; /* 画像を中央付近にまとめる */
+}
+
+.menu-images img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* 画像を中央でトリミング */
+}
+
+.menu-wrapper-grid::after { /* 下に灰色の横線を配置 */
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: 304px;
+}
+
+
+/* 店舗情報・地図 */
+#location {
+  width: 1080px;
+  height: 200px;
+  margin-bottom: 10px;
+  background-color: #F1F0EA;
+  position: relative;
+}
+
+.location-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-box {
+  width: 480px;
+  height: 200px;
+}
+
+.location-info {
+  width: 300px;
+  margin: 28px 90px;
+}
+
+dt {
+  float: left;
+  width: 100px;
+}
+
+.location-map {
+  width: 74%;
+}
+
+iframe {
+  width: 100%;
+}
+
+#location::after {
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: 204px;
+}
+
+
+/* お問い合わせ */
+.contact-wrapper {
+  width: 1080px;
+  height: 300px;
+  margin-bottom: 10px;
+  /* background-color: #0091aa; */
+  position: relative;
+}
+
+.page-title {
+  font-size: 20px;
+  text-align: center;
+}
+
+form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+form div {
+  margin-bottom: 5.5px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px #31251c solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 200px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 1.875rem;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.contact-wrapper::after { /* 下に灰色の横線を配置 */
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  top: 304px;
+}
+
+
+/* サイドバー */
+.side-wrapper {
+  width: 190px;
+  height: auto;
+  background-color: #b7ccb2;
+  margin-left: 10px;
+}
+
+.side {
+  width: 190px;
+  background-color: #b7ccb2;
+}
+
+.sub-title {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+ul.sub-menu {
+  align-items: center;
+  list-style: none;
+  margin-left: -5px;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+ul.sub-menu li {
+  margin-bottom: 30px;
+}
+
+ul.sub-menu li a {
+  font-size: 16px;
+  color: #fff;
+}
+
+ul.sns {
+  list-style: none;
+  display: flex; /* SNSアイコンを横並びに */
+  padding-left: 35px;
+}
+
+.sns img {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
+
+
+/* フッター
+-----------------------------*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  background: #9B826C;
+  height: 160px;
+  width: 1280px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner .logo {
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+}
+
+.inner .box {
+  width: 1000px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 120px;
+  margin-left: 60px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  list-style: none;
+}
+
+.inner .box li {
+  margin: 20px;
+}
+
+.inner .box li a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.container p {
+  color: #fff;
+  font-size: 0.875rem;
+  text-align: center;
+  bottom: 10px
+}
+
+
+/* モバイル版
+-----------------------------*/
+
+/* --------------- ↓タブレットメディアクエリ --------------- */
+/* 共通部分(タブレット) */
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ボタン(タブレット) */
+.button {
+  font-size: 0.75rem;
+  background-color: #b7ccb2;
+  color: #31251c;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+.button:hover {
+  background-color: #A0B39B;
+  transition: all 0.5s ease;
+}
+
+
+/* HEADER(タブレット)
+-----------------------------*/
+/* ハンバーガーメニューをディスプレイで表示させないcss */
+@media screen and (min-width: 769px) {
+  #nav-input,
+  #nav-open {
+    display: none;
+  }
+}
+
+/* for iPad */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  br {
+    display: none;
+  }
+
+  #header,
+  .footer {
+    width: 100%;
+  }
+
+  #header {
+    width: 100vw;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* background-color: #4682b4; */
+  }
+
+  #header nav {
+    display: flex; /* ロゴとメニューを並列に */
+    justify-content: space-between; /* ロゴとナビをそれぞれ両端に */
+    height: 100px;
+  }
+
+  #header nav::after {
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 100vw;
+    height: 2px;
+    border-radius: 9px;
+    top: 99%;
+    z-index: 98;
+  }
+
+  #header .logo {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+  }
+
+
+  /* ハンバーガーメニューcss */
+  #nav-drawer {
+    position: relative;
+  }
+
+  /* チェックボックス等は非表示に */
+  .nav-unshown {
+    display: none;
+  }
+
+  /* アイコンのスペース */
+  #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: -40%;
+    vertical-align: middle;
+    background: #B7CCB2;
+    position: relative;
+  }
+
+  /* ハンバーガーメニューをcssだけで表現 */
+  .ham_line {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    left: 5px;
+    background: #fff;
+    border-radius: 5px;
+  }
+
+  .ham_line1 {
+    top: 6px;
+    z-index: 101;
+  }
+
+  .ham_line2 {
+    top: 14px;
+    z-index: 101;
+  }
+
+  .ham_line3 {
+    top: 22px;
+    z-index: 101;
+  }
+
+  /* 閉じる用の薄黒カバー */
+  #nav-close {
+    display: none; /* 始めは隠しておく */
+    position: fixed;
+    z-index: 99;
+    top: 0; /* 全体に広がるように */
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+
+  /* 中身 */
+  #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100; /* 最前面に */
+    width: 80%; /* 左側に隙間をつくる(閉じるカバーを表示) */
+    max-width: 400px; /* 最大幅 */
+    height: 100%;
+    background: #b7ccb2;
+    transition: .3s ease-in-out; /* 滑らかに表示 */
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); /* 右に隠しておく */
+  }
+
+  /* チェックしたときに表示する閉じるボタン。JavaScriptで指定 */
+  .ham_line2.active {
+    opacity: 0;
+    transition: all .4s;
+  }
+
+  .ham_line1.active {
+    transition: all .4s;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    top: 14px;
+  }
+
+  .ham_line3.active {
+    transition: all .4s;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: 14px;
+  }
+
+  /* 閉じるボタンを横棒に戻す指定 */
+  .ham_line2 {
+    transition: opacity .4s ease-in;
+  }
+
+  .ham_line1,
+  .ham_line3 {
+    transition: all .4s;
+  }
+
+
+  /* チェックが入ったら表示させる */
+  #nav-input:checked ~ #nav-close {
+    display: block; /* カバーを表示させる */
+    opacity: .5;
+  }
+
+  #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); /* 中身を表示 */
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+  }
+
+  /* メニューを縦並びにする */
+  ul.main-nav {
+    display: block;
+    flex-flow: nowrap;
+    width: 400px;
+    max-width: 100%;
+    text-align: left;
+    position: fixed;
+    top: 5%;
+    right: 0;
+    z-index: 999;
+  }
+
+  /* メニューの縦線を無効化 */
+  ul.main-nav li::before {
+    position: static;
+  }
+
+  ul.main-nav li {
+    margin: 10%;
+  }
+
+  ul.main-nav li a {
+    color: #fff;
+  }
+/*------------ ↑ハンバーガーメニュー ---------------*/
+
+
+/* CONTENTS(タブレット)
+----------------------------- */
+  .wrapper {
+    display: flex;
+    max-width: 100%;
+    min-width: 261px;
+    margin: 0 auto;
+  }
+
+  .h2 {
+    text-align: center;
+  }
+
+  .text1,
+  .text2 {
+    text-align: initial;
+    font-size: 80%;
+    padding: 4.5%;
+    box-sizing: border-box;
+  }
+
+
+/* お知らせ(タブレット) */
+  .post-info {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 3% 3% 4%;
+    box-sizing: border-box;
+    position: relative;
+    /* background-color: #F57553; */
+  }
+
+  .post-info::before {
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 100%;
+    height: 2px;
+    border-radius: 9px;
+    top: 101.9%;
+    left: 0;
+  }
+
+  .post-title {
+    font-size: 95%;
+    margin: auto;
+    position: relative;
+  }
+
+  .post-title::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 15.154%;
+    height: 3px;
+    border-radius: 9px;
+    top: 110%;
+    left: 42.5%;
+    display: inline-block;
+  }
+
+
+/* こだわり、お店の特徴の親要素(タブレット) */
+  .f-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+
+/* こだわり(タブレット) */
+  .commitment {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+    /* background-color: #F5A053; */
+  }
+
+  .commitment-title {
+    font-size: 95%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+  }
+
+  .commitment-title::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 31%;
+    height: 3px;
+    border-radius: 9px;
+    top: 110%;
+    left: 34%;
+    display: inline-block;
+  }
+
+
+/* お店の特徴(タブレット) */
+  .item2 {
+    position: relative;
+  }
+
+  .item2::before {
+    content: '';
+    position: absolute;
+    background: #d0d0d0;
+    width: 2px;
+    height: 100%;
+    border-radius: 9px;
+    top: auto;
+  }
+
+  .point {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin-left: 0;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+    /* background: #F5C553; */
+  }
+
+  .point-title {
+    font-size: 95%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+  }
+
+  .point-title::after {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 30%;
+    height: 3px;
+    border-radius: 9px;
+    top: 110%;
+    left: 35%;
+    display: inline-block;
+  }
+
+
+/* 商品メニュー(タブレット) */
+  .menu-wrapper-grid {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #9B826C;
+  }
+
+  .menu-wrapper-grid::before { /* 上に灰色の横線を配置(タブレット) */
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 100%;
+    height: 2px;
+    border-radius: 9px;
+    top: -6px;
+    left: 0;
+  }
+
+  .menu-box {
+    min-width: 261px;
+  }
+
+  .menu-title {
+    font-size: 95%;
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .menu-images {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 249px;
+    max-width: 598px;
+  }
+
+  figure {
+    width: 40%;
+    height: 50%;
+    min-width: 100.0012px;
+    margin: 5%;
+    text-align: center;
+  }
+
+  figcaption {
+    text-align: center;
+    font-size: 80%;
+  }
+
+  .menu-images figure img {
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover; /* 画像を中央でトリミング(タブレット) */
+  }
+
+  .menu-wrapper-grid::after { /* 下に灰色の横線を配置(タブレット) */
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 100%;
+    height: 2px;
+    border-radius: 9px;
+    top: 100.6%;
+  }
+
+
+  /* 店舗情報・地図(タブレット) */
+  #location {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: #F1F0EA;
+    position: relative;
+  }
+
+  .location-wrapper {
+    display: flex;
+    justify-content: unset;
+    flex-direction: column;
+  }
+
+  .location-box {
+    min-width: 261px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .location-info {
+    margin: 0 auto;
+    width: 100px;
+    min-width: 250px;
+  }
+
+  dd {
+    font-size: 90%;
+    margin: 0;
+    /* background: #ffffe0; */
+  }
+
+  dt {
+    font-size: 90%;
+    float: left;
+    width: 100px;
+  }
+
+  .location-map {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  #location::after {
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 100%;
+    height: 2px;
+    border-radius: 9px;
+    top: 101%;
+  }
+
+
+  /* お問い合わせ(タブレット) */
+  .contact-wrapper {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    position: relative;
+    /* background: #0091aa; */
+  }
+
+  .page-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  form div {
+    margin-bottom: 5.5px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border: 1px #31251c solid;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 1.875rem;
+  }
+
+  input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+  }
+
+  .contact-wrapper::after { /* 下に灰色の横線を配置(タブレット) */
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 100%;
+    height: 2px;
+    top: 304px;
+  }
+
+
+  /* サイドバー(タブレット) */
+  .side-wrapper {
+    width: 30%;
+    height: auto;
+    background-color: #b7ccb2;
+    margin-left: 1%;
+  }
+
+  .side {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 57px;
+    max-width: 80px;
+  }
+
+  .sub-title {
+    font-size: 80%;
+    color: #fff;
+    text-align: center;
+  }
+
+  ul.sub-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    background: #ffffe0;
+  }
+
+  ul.sub-menu li {
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    background: #ff6347;
+  }
+
+  ul.sub-menu li a {
+    font-size: 30%;
+    color: #fff;
+  }
+
+  ul.sns {
+    list-style: none;
+    display: flex; /* SNSアイコンを横並びに(タブレット) */
+    padding: 0;
+  }
+
+  ul.sns li {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    background: #000;
+  }
+
+  ul.sns img {
+    width: 80%;
+    height: auto;
+    margin: 10%;
+  }
+
+
+  /* フッター(タブレット)
+  -----------------------------*/
+  .container {
+    background: #9B826C;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .inner {
+    width: 100%;
+    height: 50%;
+    padding-top: 10px;
+  }
+
+  .inner a {
+    margin: 1%;
+  }
+
+  .inner .logo {
+    min-width: 20px;
+    height: auto;
+    margin: 0;
+  }
+
+  .inner .box {
+    flex-wrap: wrap;
+    min-width: 295px;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    /* background: #ffffe0; */
+  }
+
+  .inner .box li {
+    width: 29%;
+    margin: 1%;
+    height: 20px;
+    /* background: #ff6347; */
+  }
+
+  footer .container .inner .box li:nth-child(1) {
+    order: 1;
+  }
+  footer .container .inner .box li:nth-child(2) {
+    order: 4;
+  }
+  footer .container .inner .box li:nth-child(3) {
+    order: 2;
+  }
+  footer .container .inner .box li:nth-child(4) {
+    order: 5;
+  }
+  footer .container .inner .box li:nth-child(5) {
+    order: 3;
+  }
+  footer .container .inner .box li:nth-child(6) {
+    order: 6;
+  }
+
+  .inner .box li a {
+    color: #fff;
+    font-size: 95%;
+  }
+
+  .container p {
+    color: #fff;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
+  }
+}
+
+
+/* --------------- ↑タブレットメディアクエリ --------------- */
+
+
+
+/* --------------- ↓スマートフォンメディアクエリ --------------- */
+
+
+    /* for iPhone */
+    @media (max-width: 320px) {
+    html {
+      font-size: 100%;
+    }
+
+    body {
+      overflow-x: hidden;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    br {
+      display: none;
+    }
+
+    #header,
+    .footer {
+      width: 100%;
+    }
+
+    #header {
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      /* background-color: #4682b4; */
+    }
+
+    #header nav {
+      display: flex; /* ロゴとメニューを並列に */
+      justify-content: space-between; /* ロゴとナビをそれぞれ両端に */
+      height: 100px;
+    }
+
+    #header nav::after {
+      content: '';
+      position: absolute;
+      background-color: #d0d0d0;
+      width: 100vw;
+      height: 2px;
+      border-radius: 9px;
+      top: 99%;
+      z-index: 98;
+    }
+
+    #header .logo {
+      width: 60px;
+      height: 60px;
+      margin: auto;
+    }
+
+
+    /* ハンバーガーメニューcss */
+    #nav-drawer {
+      position: relative;
+    }
+
+    /* チェックボックス等は非表示に */
+    .nav-unshown {
+      display: none;
+    }
+
+    /* アイコンのスペース */
+    #nav-open {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      top: 10px;
+      left: -40%;
+      vertical-align: middle;
+      background: #B7CCB2;
+      position: relative;
+    }
+
+    /* ハンバーガーメニューをcssだけで表現 */
+    .ham_line {
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      left: 5px;
+      background: #fff;
+      border-radius: 5px;
+    }
+
+    .ham_line1 {
+      top: 6px;
+      z-index: 101;
+    }
+
+    .ham_line2 {
+      top: 14px;
+      z-index: 101;
+    }
+
+    .ham_line3 {
+      top: 22px;
+      z-index: 101;
+    }
+
+    /* 閉じる用の薄黒カバー */
+    #nav-close {
+      display: none; /* 始めは隠しておく */
+      position: fixed;
+      z-index: 99;
+      top: 0; /* 全体に広がるように */
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0;
+      transition: .3s ease-in-out;
+    }
+
+    /* 中身 */
+    #nav-content {
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 100; /* 最前面に */
+      width: 80%; /* 左側に隙間をつくる(閉じるカバーを表示) */
+      max-width: 400px; /* 最大幅 */
+      height: 100%;
+      background: #b7ccb2;
+      transition: .3s ease-in-out; /* 滑らかに表示 */
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%); /* 右に隠しておく */
+    }
+
+    /* チェックしたときに表示するバツボタン。JavaScriptで指定 */
+    .ham_line2.active {
+      opacity: 0;
+      transition: all .4s;
+    }
+
+    .ham_line1.active {
+      transition: all .4s;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      top: 14px;
+    }
+
+    .ham_line3.active {
+      transition: all .4s;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      top: 14px;
+    }
+
+    /* 閉じるボタンを横棒に戻す設定 */
+    .ham_line2 {
+      transition: opacity .4s ease-in;
+    }
+
+    .ham_line1,
+    .ham_line3 {
+      transition: all .4s;
+    }
+
+    /* チェックが入ったら表示させる */
+    #nav-input:checked ~ #nav-close {
+      display: block; /* カバーを表示させる */
+      opacity: .5;
+    }
+
+    #nav-input:checked ~ #nav-content {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%); /* 中身を表示 */
+      box-shadow: 6px 0 25px rgba(0,0,0,.15);
+    }
+
+    /* メニューを縦並びにする */
+    ul.main-nav {
+      display: block;
+      flex-flow: nowrap;
+      width: 400px;
+      max-width: 100%;
+      text-align: left;
+      position: fixed;
+      top: 5%;
+      right: 0;
+      z-index: 999;
+    }
+
+    /* メニューの縦線を無効化 */
+    ul.main-nav li::before {
+      position: static;
+    }
+
+    ul.main-nav li {
+      margin: 10%;
+    }
+
+    ul.main-nav li a {
+      color: #fff;
+    }
+  /*------------ ↑ハンバーガーメニュー ---------------*/
+
+
+  /* CONTENTS(スマートフォン)
+  ----------------------------- */
+    .wrapper {
+      display: block;
+      max-width: 100%;
+      min-width: 261px;
+      margin: 0 auto;
+    }
+
+    .h2 {
+      text-align: center;
+    }
+
+    .text1,
+    .text2 {
+      text-align: initial;
+      font-size: 80%;
+      padding: 4.5%;
+      box-sizing: border-box;
+    }
+
+
+  /* お知らせ(スマートフォン) */
+    .post-info {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      padding: 3% 3% 4%;
+      box-sizing: border-box;
+      position: relative;
+      /* background-color: #F57553; */
+    }
+
+    .post-info::before {
+      content: '';
+      position: absolute;
+      background-color: #d0d0d0;
+      width: 100%;
+      height: 2px;
+      border-radius: 9px;
+      top: 101.9%;
+      left: 0;
+    }
+
+    .post-title {
+      text-align: center;
+      font-size: 95%;
+      margin: auto;
+      position: relative;
+    }
+
+    .post-title::after {
+      content: '';
+      position: absolute;
+      background-color: #b7ccb2;
+      width: 31%;
+      height: 3px;
+      border-radius: 9px;
+      top: 110%;
+      left: 34%;
+      display: inline-block;
+    }
+
+
+  /* こだわり、お店の特徴の親要素(スマートフォン) */
+    .f-container {
+      display: block;
+      flex-wrap: nowrap;
+    }
+
+
+  /* こだわり(スマートフォン) */
+    .commitment {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      padding: 3% 3% 5%;
+      min-width: 130.5px;
+      max-width: 320px;
+      /* background-color: #F5A053; */
+    }
+
+    .commitment-title {
+      font-size: 95%;
+      text-align: center;
+      margin: auto;
+      position: relative;
+    }
+
+    .commitment-title::after {
+      content: '';
+      position: absolute;
+      background-color: #b7ccb2;
+      width: 31%;
+      height: 3px;
+      border-radius: 9px;
+      top: 110%;
+      left: 34%;
+      display: inline-block;
+    }
+
+
+  /* お店の特徴(スマートフォン) */
+    .item2 {
+      position: relative;
+    }
+
+    .item2::before {
+      content: '';
+      position: absolute;
+      background: #d0d0d0;
+      width: 100%;
+      height: 2px;
+      border-radius: 9px;
+      top: -2.5%;
+    }
+
+    .point {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      margin-top: 3%;
+      margin-left: 0;
+      padding: 3% 3% 5%;
+      min-width: 130.5px;
+      max-width: 320px;
+      /* background: #F5C553; */
+    }
+
+    .point-title {
+      font-size: 95%;
+      text-align: center;
+      margin: auto;
+      position: relative;
+    }
+
+    .point-title::after {
+      content: '';
+      position: absolute;
+      background-color: #b7ccb2;
+      width: 30%;
+      height: 3px;
+      border-radius: 9px;
+      top: 110%;
+      left: 35%;
+      display: inline-block;
+    }
+
+
+  /* 商品メニュー(スマートフォン) */
+    .menu-wrapper-grid {
+      width: 100%;
+      height: auto;
+      position: relative;
+      background-color: #9B826C;
+    }
+
+    .menu-wrapper-grid::before { /* 上に灰色の横線を配置(スマートフォン) */
+      content: '';
+      position: absolute;
+      background-color: #d0d0d0;
+      width: 100%;
+      height: 2px;
+      border-radius: 9px;
+      top: -6px;
+      left: 0;
+    }
+
+    .menu-box {
+      min-width: 261px;
+    }
+
+    .menu-title {
+      font-size: 95%;
+      text-align: center;
+      margin-top: 4%;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .menu-images {
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 249px;
+      max-width: 598px;
+    }
+
+    figure {
+      width: 40%;
+      height: 50%;
+      min-width: 100.0012px;
+      margin: 5%;
+      text-align: center;
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 80%;
+    }
+
+    .menu-images figure img {
+      width: 100%;
+      height: 100%;
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 200px;
+      max-height: 200px;
+      object-fit: cover; /* 画像を中央でトリミング(スマートフォン) */
+    }
+
+    .menu-wrapper-grid::after { /* 下に灰色の横線を配置(スマートフォン) */
+      content: '';
+      position: absolute;
+      background-color: #d0d0d0;
+      width: 100%;
+      height: 2px;
+      border-radius: 9px;
+      top: 101.3%;
+    }
+
+
+    /* 店舗情報・地図(スマートフォン) */
+    #location {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      background-color: #F1F0EA;
+      position: relative;
+    }
+
+    .location-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .location-box {
+      min-width: 261px;
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .location-info {
+      margin: 0 auto;
+      width: 100px;
+      min-width: 250px;
+    }
+
+    dd {
+      font-size: 90%;
+      margin: 0;
+      /* background: #ffffe0; */
+    }
+
+    dt {
+      font-size: 90%;
+      float: left;
+      width: 100px;
+    }
+
+    .location-map {
+      width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+    }
+
+    #location::after {
+      content: '';
+      position: absolute;
+      background-color: #d0d0d0;
+      width: 100%;
+      height: 2px;
+      border-radius: 9px;
+      top: 102%;
+    }
+
+
+    /* お問い合わせ(スマートフォン) */
+    .contact-wrapper {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+      position: relative;
+      /* background: #0091aa; */
+    }
+
+    .page-title {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    form div {
+      margin-bottom: 5.5px;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      border: 1px #31251c solid;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 600px;
+      height: 1.875rem;
+    }
+
+    input[type="submit"] {
+      border: none;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
+    .contact-wrapper::after { /* 下に灰色の横線を配置(スマートフォン) */
+      content: '';
+      position: absolute;
+      background-color: #d0d0d0;
+      width: 100%;
+      height: 2px;
+      top: 304px;
+    }
+
+
+    /* サイドバー(スマートフォン) */
+    .side-wrapper {
+      width: 100%;
+      margin-left: unset;
+    }
+
+    .side {
+      max-width: 300px;
+    }
+
+    .sub-title,
+    ul.sub-menu,
+    ul.sub-menu li {
+      display: none;
+    }
+
+    ul.sns {
+      list-style: none;
+      display: flex; /* SNSアイコンを横並びに(スマートフォン) */
+      margin: 0 auto;
+      padding-top: 1%;
+    }
+
+    ul.sns li {
+      display: inline-block;
+      width: 50%;
+      height: auto;
+      text-align: center;
+    }
+
+    ul.sns img {
+      width: 30%;
+      height: auto;
+      margin: 10%;
+    }
+
+
+    /* フッター(スマートフォン)
+    -----------------------------*/
+    .container {
+      background: #9B826C;
+      width: 100%;
+      height: auto;
+      min-width: 260px;
+      max-width: 320px;
+    }
+
+    .inner {
+      width: 100%;
+      height: 50%;
+      padding-top: 10px;
+    }
+
+    .inner a {
+      margin: 1%;
+    }
+
+    .inner .logo {
+      min-width: 10px;
+      max-width: 30px;
+      height: auto;
+      margin: 0;
+    }
+
+    .inner .box {
+      flex-wrap: wrap;
+      min-width: 180px;
+      max-width: 290px;
+      width: 80%;
+      height: 80px;
+      margin: 0 auto;
+      /* background: #ffffe0; */
+    }
+
+    .inner .box li {
+      width: 40%;
+      margin: 1%;
+      height: 20px;
+      /* background: #ff6347; */
+    }
+
+    footer .container .inner .box li:nth-child(1) {
+      order: 1;
+    }
+    footer .container .inner .box li:nth-child(2) {
+      order: 3;
+    }
+    footer .container .inner .box li:nth-child(3) {
+      order: 5;
+    }
+    footer .container .inner .box li:nth-child(4) {
+      order: 2;
+    }
+    footer .container .inner .box li:nth-child(5) {
+      order: 4;
+    }
+    footer .container .inner .box li:nth-child(6) {
+      order: 6;
+    }
+
+    .inner .box li a {
+      color: #fff;
+      font-size: 95%;
+    }
+
+    .container p {
+      color: #fff;
+      font-size: 0.875rem;
+      text-align: center;
+      margin-top: 8%;
+      margin-bottom: 5%;
+    }
+  }
+
+
+/* --------------- ↑スマートフォンメディアクエリ --------------- */
