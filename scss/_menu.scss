@@ -1,0 +1,30 @@
+.menu-wrapper-grid {
+  background: #ffffff;
+  height: auto;
+}
+
+.menu-wrapper-grid::before {
+  content: none;
+}
+
+.menu-title {
+  color: #31251c;
+}
+
+.menu-images {
+  display: block;
+}
+
+figcaption {
+  width: 80%;
+  height: 50%;
+}
+
+dl {
+  display: flex;
+  flex-direction: column;
+}
+
+.bread-name {
+  font-size: 1.5em;
+}
