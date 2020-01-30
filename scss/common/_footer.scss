@@ -1,1 +1,47 @@
-tttt
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    background: #9B826C;
+    height: 160px;
+    width: 1280px;
+  }
+  
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .inner .logo {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+  }
+  
+  .inner .box {
+    width: 1000px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 120px;
+    margin-left: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    list-style: none;
+  }
+  
+  .inner .box li {
+    margin: 20px;
+  }
+  
+  .inner .box li a {
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .container p {
+    color: #fff;
+    font-size: 0.875rem;
+    text-align: center;
+    bottom: 10px
+  }

@@ -1,1 +1,64 @@
-rrrr
+#header {
+    width: 1280px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* background-color: #4682b4; */
+  }
+  
+  #header nav {
+    display: flex; /* ロゴとメニューを並列に */
+    justify-content: space-between; /* ロゴとナビをそれぞれ両端に */
+    height: 100px;
+  }
+  
+  #header nav::after {
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1280px;
+    height: 2px;
+    border-radius: 9px;
+    top: 100px;
+  }
+  
+  #header .logo {
+    width: 80px;
+    height: 80px;
+    margin: 10px 10px 10px 20px;
+  }
+  
+  ul.main-nav {
+    display: flex;
+    align-items: center; /* ナビを中央に揃える */
+    list-style: none;
+    margin: 0; /* ブラウザ固有のmarginを消す←リセット系のcss入れれば大体消える */
+    height: 100px;
+    position: relative;
+  }
+  
+  ul.main-nav li::before {
+    content: '';
+    position: absolute;
+    background-color: #b7ccb2;
+    width: 3px;
+    height: 60px;
+    border-radius: 9px;
+    top: 20px;
+  }
+  
+  ul.main-nav li:nth-child(1)::before {
+    content: none;
+  }
+  
+  .main-nav li a {
+    color: #31251c;
+    padding: 40px 40px 44px;
+  }
+  
+  .main-nav li a:hover {
+    color: #d0d0d0;
+    transition: all 0.5s ease;
+    text-decoration: none;
+  }
