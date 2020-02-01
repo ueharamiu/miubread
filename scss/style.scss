@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
+@import "./menu";
 @import "./common/footer";
 @import "./common/header";
 @import "./common/sidebar";
 
 @import "./page/toppage";
 
-@import "./menu";
+
 
 /* 共通部分 */
 html {
@@ -1583,14 +1584,14 @@ img {
 
 
   /* 商品メニュー(スマートフォン) */
-    .menu-wrapper-grid {
+    .toppage-menu-wrapper-grid {
       width: 100%;
       height: auto;
       position: relative;
       background-color: #9B826C;
     }
 
-    .menu-wrapper-grid::before { /* 上に灰色の横線を配置(スマートフォン) */
+    .toppage-menu-wrapper-grid::before { /* 上に灰色の横線を配置(スマートフォン) */
       content: '';
       position: absolute;
       background-color: #d0d0d0;
@@ -1601,11 +1602,11 @@ img {
       left: 0;
     }
 
-    .menu-box {
+    .toppage-menu-box {
       min-width: 261px;
     }
 
-    .menu-title {
+    .toppage-menu-title {
       font-size: 95%;
       text-align: center;
       margin-top: 4%;
@@ -1613,7 +1614,7 @@ img {
       color: #ffffff;
     }
 
-    .menu-images {
+    .toppage-menu-images {
       display: flex;
       flex-wrap: wrap;
       min-width: 249px;
@@ -1633,7 +1634,7 @@ img {
       font-size: 80%;
     }
 
-    .menu-images figure img {
+    .toppage-menu-images figure img {
       width: 100%;
       height: 100%;
       min-width: 50px;
@@ -1643,7 +1644,7 @@ img {
       object-fit: cover; /* 画像を中央でトリミング(スマートフォン) */
     }
 
-    .menu-wrapper-grid::after { /* 下に灰色の横線を配置(スマートフォン) */
+    .toppage-menu-wrapper-grid::after { /* 下に灰色の横線を配置(スマートフォン) */
       content: '';
       position: absolute;
       background-color: #d0d0d0;

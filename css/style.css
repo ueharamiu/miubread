@@ -1,4 +1,51 @@
 @charset "UTF-8";
+.menu-wrapper-grid {
+  background: #ffffff;
+  height: auto;
+}
+
+.menu-wrapper-grid::before {
+  content: none;
+}
+
+.menu-title {
+  color: #31251c;
+}
+
+.menu-images {
+  display: block;
+}
+
+.anpan,
+.plain-bread {
+  float: left;
+}
+
+.croissant,
+.sweet-bread {
+  float: right;
+}
+
+figcaption {
+  width: 80%;
+  height: 50%;
+}
+
+.menu-commentary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu-commentary > .bread-name {
+  font-size: 1.5em;
+  width: 200px;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -300,7 +347,7 @@ ul.sns {
 }
 
 /* 商品メニュー(index.html) */
-.menu-wrapper-grid {
+.toppage-menu-wrapper-grid {
   width: 1080px;
   height: 300px;
   margin-top: 10px;
@@ -309,7 +356,7 @@ ul.sns {
   position: relative;
 }
 
-.menu-wrapper-grid::before {
+.toppage-menu-wrapper-grid::before {
   /* 上に灰色の横線を配置 */
   content: '';
   position: absolute;
@@ -352,7 +399,7 @@ ul.sns {
   /* 画像を中央でトリミング */
 }
 
-.menu-wrapper-grid::after {
+.toppage-menu-wrapper-grid::after {
   /* 下に灰色の横線を配置 */
   content: '';
   position: absolute;
@@ -477,42 +524,6 @@ input[type="submit"] {
   width: 1080px;
   height: 2px;
   top: 304px;
-}
-
-.menu-wrapper-grid {
-  background: #ffffff;
-  height: auto;
-}
-
-.menu-wrapper-grid::before {
-  content: none;
-}
-
-.menu-title {
-  color: #31251c;
-}
-
-.menu-images {
-  display: block;
-}
-
-figcaption {
-  width: 80%;
-  height: 50%;
-}
-
-dl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.bread-name {
-  font-size: 1.5em;
 }
 
 /* 共通部分 */
@@ -2059,13 +2070,13 @@ img {
     display: inline-block;
   }
   /* 商品メニュー(スマートフォン) */
-  .menu-wrapper-grid {
+  .toppage-menu-wrapper-grid {
     width: 100%;
     height: auto;
     position: relative;
     background-color: #9B826C;
   }
-  .menu-wrapper-grid::before {
+  .toppage-menu-wrapper-grid::before {
     /* 上に灰色の横線を配置(スマートフォン) */
     content: '';
     position: absolute;
@@ -2076,17 +2087,17 @@ img {
     top: -6px;
     left: 0;
   }
-  .menu-box {
+  .toppage-menu-box {
     min-width: 261px;
   }
-  .menu-title {
+  .toppage-menu-title {
     font-size: 95%;
     text-align: center;
     margin-top: 4%;
     margin-bottom: 10px;
     color: #ffffff;
   }
-  .menu-images {
+  .toppage-menu-images {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2106,7 +2117,7 @@ img {
     text-align: center;
     font-size: 80%;
   }
-  .menu-images figure img {
+  .toppage-menu-images figure img {
     width: 100%;
     height: 100%;
     min-width: 50px;
@@ -2117,7 +2128,7 @@ img {
        object-fit: cover;
     /* 画像を中央でトリミング(スマートフォン) */
   }
-  .menu-wrapper-grid::after {
+  .toppage-menu-wrapper-grid::after {
     /* 下に灰色の横線を配置(スマートフォン) */
     content: '';
     position: absolute;

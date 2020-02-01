@@ -113,7 +113,7 @@
   
   
   /* 商品メニュー(index.html) */
-  .menu-wrapper-grid {
+  .toppage-menu-wrapper-grid {
     width: 1080px;
     height: 300px;
     margin-top: 10px;
@@ -122,7 +122,7 @@
     position: relative;
   }
   
-  .menu-wrapper-grid::before { /* 上に灰色の横線を配置 */
+  .toppage-menu-wrapper-grid::before { /* 上に灰色の横線を配置 */
     content: '';
     position: absolute;
     background-color: #d0d0d0;
@@ -157,7 +157,7 @@
     object-fit: cover; /* 画像を中央でトリミング */
   }
   
-  .menu-wrapper-grid::after { /* 下に灰色の横線を配置 */
+  .toppage-menu-wrapper-grid::after { /* 下に灰色の横線を配置 */
     content: '';
     position: absolute;
     background-color: #d0d0d0;

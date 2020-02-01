@@ -1,10 +1,9 @@
 .menu-wrapper-grid {
   background: #ffffff;
   height: auto;
-}
-
-.menu-wrapper-grid::before {
-  content: none;
+  &::before {
+    content: none;
+  }
 }
 
 .menu-title {
@@ -15,16 +14,28 @@
   display: block;
 }
 
+.anpan,
+.plain-bread {
+  float: left;
+}
+
+.croissant,
+.sweet-bread {
+  float: right;
+}
+
 figcaption {
   width: 80%;
   height: 50%;
 }
 
-dl {
+.menu-commentary {
   display: flex;
   flex-direction: column;
+  > .bread-name {
+    font-size: 1.5em;
+    width: 200px;
+  }
 }
 
-.bread-name {
-  font-size: 1.5em;
-}
+
