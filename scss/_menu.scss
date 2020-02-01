@@ -4,15 +4,22 @@
   &::before {
     content: none;
   }
-}
-
-.menu-title {
-  color: #31251c;
-}
-
-.menu-images {
-  display: block;
-}
+  &-title {
+    color: #31251c;
+  }
+  
+  &-images {
+    display: block;
+  }
+  &-commentary {
+    display: flex;
+    flex-direction: column;
+    > .bread-name {
+      font-size: 1.5em;
+      width: 200px;
+    }
+  }
+  }
 
 .anpan,
 .plain-bread {
@@ -28,14 +35,4 @@ figcaption {
   width: 80%;
   height: 50%;
 }
-
-.menu-commentary {
-  display: flex;
-  flex-direction: column;
-  > .bread-name {
-    font-size: 1.5em;
-    width: 200px;
-  }
-}
-
 
