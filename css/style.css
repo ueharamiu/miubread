@@ -536,13 +536,7 @@ body {
   color: #31251c;
 }
 
-.text1 {
-  text-align: center;
-  font-size: 14px;
-  padding: 5px 0px 10px;
-}
-
-.text2 {
+.text1, .text2 {
   text-align: center;
   font-size: 14px;
   padding: 5px 0px 10px;
@@ -916,16 +910,19 @@ label {
   display: block;
 }
 
-input[type="text"],
-input[type="email"],
+input[type="text"], input[type="email"] {
+  border: 1px #31251c solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 textarea {
   border: 1px #31251c solid;
   border-radius: 5px;
   padding: 5px;
 }
 
-input[type="text"],
-input[type="email"] {
+input[type="text"], input[type="email"] {
   width: 100%;
   max-width: 200px;
 }
@@ -1094,8 +1091,7 @@ img {
 -----------------------------*/
 /* ハンバーガーメニューをディスプレイで表示させないcss */
 @media screen and (min-width: 769px) {
-  #nav-input,
-  #nav-open {
+  #nav-input, #nav-open {
     display: none;
   }
 }
@@ -1113,8 +1109,7 @@ img {
   br {
     display: none;
   }
-  #header,
-  .footer {
+  #header, .footer {
     width: 100%;
   }
   #header {
@@ -1253,8 +1248,7 @@ img {
     -webkit-transition: opacity .4s ease-in;
     transition: opacity .4s ease-in;
   }
-  .ham_line1,
-  .ham_line3 {
+  .ham_line1, .ham_line3 {
     -webkit-transition: all .4s;
     transition: all .4s;
   }
@@ -1284,19 +1278,19 @@ img {
     right: 0;
     z-index: 999;
   }
-  /* メニューの縦線を無効化 */
-  ul.main-nav li::before {
-    position: static;
-  }
   ul.main-nav li {
     margin: 10%;
+  }
+  ul.main-nav li::before {
+    position: static;
   }
   ul.main-nav li a {
     color: #fff;
   }
+  /* メニューの縦線を無効化 */
   /*------------ ↑ハンバーガーメニュー ---------------*/
   /* CONTENTS(タブレット)
------------------------------ */
+  ----------------------------- */
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1308,8 +1302,7 @@ img {
   .h2 {
     text-align: center;
   }
-  .text1,
-  .text2 {
+  .text1, .text2 {
     text-align: initial;
     font-size: 80%;
     padding: 4.5%;
@@ -1541,10 +1534,7 @@ img {
     float: left;
     width: 100px;
   }
-  .location-map {
-    width: 100%;
-  }
-  iframe {
+  .location-map, iframe {
     width: 100%;
   }
   #location::after {
@@ -1576,15 +1566,17 @@ img {
     margin-bottom: 5px;
     display: block;
   }
-  input[type="text"],
-  input[type="email"],
+  input[type="text"], input[type="email"] {
+    border: 1px #31251c solid;
+    border-radius: 5px;
+    padding: 5px;
+  }
   textarea {
     border: 1px #31251c solid;
     border-radius: 5px;
     padding: 5px;
   }
-  input[type="text"],
-  input[type="email"] {
+  input[type="text"], input[type="email"] {
     width: 100%;
     max-width: 200px;
   }
@@ -1754,8 +1746,7 @@ img {
   br {
     display: none;
   }
-  #header,
-  .footer {
+  #header, .footer {
     width: 100%;
   }
   #header {
@@ -1894,8 +1885,7 @@ img {
     -webkit-transition: opacity .4s ease-in;
     transition: opacity .4s ease-in;
   }
-  .ham_line1,
-  .ham_line3 {
+  .ham_line1, .ham_line3 {
     -webkit-transition: all .4s;
     transition: all .4s;
   }
@@ -1925,16 +1915,16 @@ img {
     right: 0;
     z-index: 999;
   }
-  /* メニューの縦線を無効化 */
-  ul.main-nav li::before {
-    position: static;
-  }
   ul.main-nav li {
     margin: 10%;
+  }
+  ul.main-nav li::before {
+    position: static;
   }
   ul.main-nav li a {
     color: #fff;
   }
+  /* メニューの縦線を無効化 */
   /*------------ ↑ハンバーガーメニュー ---------------*/
   /* CONTENTS(スマートフォン)
   ----------------------------- */
@@ -1947,8 +1937,7 @@ img {
   .h2 {
     text-align: center;
   }
-  .text1,
-  .text2 {
+  .text1, .text2 {
     text-align: initial;
     font-size: 80%;
     padding: 4.5%;
@@ -2177,10 +2166,7 @@ img {
     float: left;
     width: 100px;
   }
-  .location-map {
-    width: 100%;
-  }
-  iframe {
+  .location-map, iframe {
     width: 100%;
   }
   #location::after {
@@ -2212,15 +2198,17 @@ img {
     margin-bottom: 5px;
     display: block;
   }
-  input[type="text"],
-  input[type="email"],
+  input[type="text"], input[type="email"] {
+    border: 1px #31251c solid;
+    border-radius: 5px;
+    padding: 5px;
+  }
   textarea {
     border: 1px #31251c solid;
     border-radius: 5px;
     padding: 5px;
   }
-  input[type="text"],
-  input[type="email"] {
+  input[type="text"], input[type="email"] {
     width: 100%;
     max-width: 200px;
   }
@@ -2251,8 +2239,12 @@ img {
   .side {
     max-width: 300px;
   }
-  .sub-title,
-  ul.sub-menu,
+  .sub-title {
+    display: none;
+  }
+  ul.sub-menu {
+    display: none;
+  }
   ul.sub-menu li {
     display: none;
   }
@@ -2277,7 +2269,7 @@ img {
     margin: 10%;
   }
   /* フッター(スマートフォン)
-    -----------------------------*/
+  -----------------------------*/
   .container {
     background: #9B826C;
     width: 100%;
