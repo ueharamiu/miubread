@@ -599,7 +599,6 @@ img {
   html {
     font-size: 100%;
   }
-
   body {
     overflow-x: hidden;
     margin-right: auto;
@@ -1333,7 +1332,7 @@ img {
   }
 
   body {
-    overflow-x: hidden;
+    overflow: hidden;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1347,6 +1346,11 @@ img {
   }
 
   #header {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 
     nav {
       display: flex;
