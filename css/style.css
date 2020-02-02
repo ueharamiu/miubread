@@ -1,58 +1,49 @@
 @charset "UTF-8";
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  background: #9B826C;
-  height: 160px;
-  width: 1280px;
+.menu-wrapper-grid {
+  background: #fff;
+  height: auto;
 }
 
-.inner {
+.menu-wrapper-grid::before {
+  content: none;
+}
+
+.menu-wrapper-grid-title {
+  color: #31251c;
+}
+
+.menu-wrapper-grid-images {
+  display: block;
+}
+
+.menu-wrapper-grid-commentary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.inner .logo {
-  width: 60px;
-  height: 60px;
-  margin: 20px;
+.menu-wrapper-grid-commentary > .bread-name {
+  font-size: 1.5em;
+  width: 200px;
 }
 
-.inner .box {
-  width: 1000px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 120px;
-  margin-left: 60px;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 14px;
-  list-style: none;
+.anpan,
+.plain-bread {
+  float: left;
 }
 
-.inner .box li {
-  margin: 20px;
+.croissant,
+.sweet-bread {
+  float: right;
 }
 
-.inner .box li a {
-  color: #fff;
-  font-size: 14px;
-}
-
-.container p {
-  color: #fff;
-  font-size: 0.875rem;
-  text-align: center;
-  bottom: 10px;
+figcaption {
+  width: 80%;
+  height: 50%;
 }
 
 #header {
@@ -131,6 +122,62 @@ ul.main-nav li:nth-child(1)::before {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   text-decoration: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  background: #9B826C;
+  height: 160px;
+  width: 1280px;
+}
+
+.inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.inner .logo {
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+}
+
+.inner .box {
+  width: 1000px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 120px;
+  margin-left: 60px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  list-style: none;
+}
+
+.inner .box li {
+  margin: 20px;
+}
+
+.inner .box li a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.container p {
+  color: #fff;
+  font-size: 0.875rem;
+  text-align: center;
+  bottom: 10px;
 }
 
 .side-wrapper {
@@ -479,53 +526,6 @@ input[type="submit"] {
   top: 304px;
 }
 
-.menu-wrapper-grid {
-  background: #fff;
-  height: auto;
-}
-
-.menu-wrapper-grid::before {
-  content: none;
-}
-
-.menu-wrapper-grid-title {
-  color: #31251c;
-}
-
-.menu-wrapper-grid-images {
-  display: block;
-}
-
-.menu-wrapper-grid-commentary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.menu-wrapper-grid-commentary > .bread-name {
-  font-size: 1.5em;
-  width: 200px;
-}
-
-.anpan,
-.plain-bread {
-  float: left;
-}
-
-.croissant,
-.sweet-bread {
-  float: right;
-}
-
-figcaption {
-  width: 80%;
-  height: 50%;
-}
-
 /* 共通部分 */
 html {
   font-size: 100%;
@@ -578,7 +578,20 @@ img {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  /* background-color: #4682b4; */
+}
+
+@media (max-width: 768px) {
+  #header {
+    width: 100vw;
+    height: 80%;
+  }
+}
+
+@media (max-width: 320px) {
+  #header {
+    width: 100%;
+    height: auto;
+  }
 }
 
 #header nav {
@@ -1098,6 +1111,9 @@ img {
 
 /* for iPad */
 @media screen and (max-width: 768px) {
+  #nav-input, #nav-open {
+    display: block;
+  }
   html {
     font-size: 100%;
   }
@@ -1111,14 +1127,6 @@ img {
   }
   #header, .footer {
     width: 100%;
-  }
-  #header {
-    width: 100vw;
-    height: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    /* background-color: #4682b4; */
   }
   #header nav {
     display: -webkit-box;
@@ -1748,14 +1756,6 @@ img {
   }
   #header, .footer {
     width: 100%;
-  }
-  #header {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    /* background-color: #4682b4; */
   }
   #header nav {
     display: -webkit-box;
