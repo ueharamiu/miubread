@@ -59,9 +59,6 @@ img {
 
 /* HEADER
 -----------------------------*/
-
-
-
 #header {
   width: 1280px;
   height: 110px;
@@ -78,12 +75,8 @@ img {
   }
 
   nav {
-    display: flex;
-
-    /* ロゴとメニューを並列に */
-    justify-content: space-between;
-
-    /* ロゴとナビをそれぞれ両端に */
+    display: flex; /* ロゴとメニューを並列に */
+    justify-content: space-between; /* ロゴとナビをそれぞれ両端に */
     height: 100px;
 
     &::after {
@@ -106,13 +99,9 @@ img {
 
 ul.main-nav {
   display: flex;
-  align-items: center;
-
-  /* ナビを中央に揃える */
+  align-items: center; /* ナビを中央に揃える */
   list-style: none;
-  margin: 0;
-
-  /* ブラウザ固有のmarginを消す←リセット系のcss入れれば大体消える */
+  margin: 0; /* ブラウザ固有のmarginを消す←リセット系のcss入れれば大体消える */
   height: 100px;
   position: relative;
 
@@ -616,12 +605,8 @@ img {
   #header {
 
     nav {
-      display: flex;
-
-      /* ロゴとメニューを並列に */
-      justify-content: space-between;
-
-      /* ロゴとナビをそれぞれ両端に */
+      display: flex; /* ロゴとメニューを並列に */
+      justify-content: space-between; /* ロゴとナビをそれぞれ両端に */
       height: 100px;
 
       &::after {
