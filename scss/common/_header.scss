@@ -1,34 +1,53 @@
+/* HEADER
+-----------------------------*/
 #header {
-    width: 1280px;
-    height: 110px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    /* background-color: #4682b4; */
+  width: 1280px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  @include breakpoint( tablet ) {
+    width: 100vw;
+    height: 80%;
   }
-  
-  #header nav {
+  @include breakpoint( sp ) {
+    width: 100%;
+    height: auto;
+  }
+
+  nav {
     display: flex; /* ロゴとメニューを並列に */
     justify-content: space-between; /* ロゴとナビをそれぞれ両端に */
     height: 100px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #d0d0d0;
+      width: 1280px;
+      height: 2px;
+      border-radius: 9px;
+      top: 100px;
+    }
   }
-  
-  #header nav::after {
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 1280px;
-    height: 2px;
-    border-radius: 9px;
-    top: 100px;
-  }
-  
-  #header .logo {
+
+  .logo {
     width: 80px;
     height: 80px;
     margin: 10px 10px 10px 20px;
+    @include breakpoint( tablet ) {
+      width: 60px;
+      height: 60px;
+      margin: auto;
+    }
+    @include breakpoint( sp ) {
+      width: 60px;
+      height: 60px;
+      margin: auto;
+    }
   }
-  
+}
+
   ul.main-nav {
     display: flex;
     align-items: center; /* ナビを中央に揃える */
@@ -36,29 +55,43 @@
     margin: 0; /* ブラウザ固有のmarginを消す←リセット系のcss入れれば大体消える */
     height: 100px;
     position: relative;
+    @include breakpoint( tablet ) {
+      display: block;
+      flex-flow: nowrap;
+      width: 400px;
+      max-width: 100%;
+      text-align: left;
+      position: fixed;
+      top: 5%;
+      right: 0;
+      z-index: 999;
+    }
+
+  li {
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: #b7ccb2;
+      width: 3px;
+      height: 60px;
+      border-radius: 9px;
+      top: 20px;
+    }
+
+    &:nth-child(1)::before {
+      content: none;
+    }
   }
   
-  ul.main-nav li::before {
-    content: '';
-    position: absolute;
-    background-color: #b7ccb2;
-    width: 3px;
-    height: 60px;
-    border-radius: 9px;
-    top: 20px;
-  }
-  
-  ul.main-nav li:nth-child(1)::before {
-    content: none;
-  }
-  
-  .main-nav li a {
-    color: #31251c;
-    padding: 40px 40px 44px;
-  }
-  
-  .main-nav li a:hover {
+}
+
+.main-nav li a {
+  color: #31251c;
+  padding: 40px 40px 44px;
+
+  &:hover {
     color: #d0d0d0;
     transition: all 0.5s ease;
     text-decoration: none;
   }
+}
