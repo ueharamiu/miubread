@@ -391,15 +391,58 @@ ul.main-nav li:nth-child(1)::before {
   margin-left: 10px;
 }
 
+@media (max-width: 768px) {
+  .side-wrapper {
+    width: 30%;
+    height: auto;
+    background-color: #b7ccb2;
+    margin-left: 1%;
+  }
+}
+
+@media (max-width: 320px) {
+  .side-wrapper {
+    width: 100%;
+    margin-left: unset;
+  }
+}
+
 .side {
   width: 190px;
   background-color: #b7ccb2;
+}
+
+@media (max-width: 768px) {
+  .side {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 57px;
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 320px) {
+  .side {
+    max-width: 300px;
+  }
 }
 
 .sub-title {
   font-size: 20px;
   color: #fff;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .sub-title {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 320px) {
+  .sub-title {
+    display: none;
+  }
 }
 
 ul.sub-menu {
@@ -412,13 +455,46 @@ ul.sub-menu {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  ul.sub-menu {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  ul.sub-menu {
+    display: none;
+  }
+}
+
 ul.sub-menu li {
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  ul.sub-menu li {
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 320px) {
+  ul.sub-menu li {
+    display: none;
+  }
 }
 
 ul.sub-menu li a {
   font-size: 16px;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  ul.sub-menu li a {
+    font-size: 30%;
+  }
 }
 
 ul.sns {
@@ -430,10 +506,54 @@ ul.sns {
   padding-left: 35px;
 }
 
+@media (max-width: 768px) {
+  ul.sns {
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  ul.sns {
+    margin: 0 auto;
+    padding-top: 1%;
+  }
+}
+
+@media (max-width: 768px) {
+  ul.sns li {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  ul.sns li {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    text-align: center;
+  }
+}
+
 .sns img {
   height: 30px;
   width: 30px;
   margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .sns img {
+    width: 80%;
+    height: auto;
+    margin: 10%;
+  }
+}
+
+@media (max-width: 320px) {
+  .sns img {
+    width: 30%;
+  }
 }
 
 .wrapper {
@@ -1223,15 +1343,58 @@ input[type="submit"] {
   margin-left: 10px;
 }
 
+@media (max-width: 768px) {
+  .side-wrapper {
+    width: 30%;
+    height: auto;
+    background-color: #b7ccb2;
+    margin-left: 1%;
+  }
+}
+
+@media (max-width: 320px) {
+  .side-wrapper {
+    width: 100%;
+    margin-left: unset;
+  }
+}
+
 .side {
   width: 190px;
   background-color: #b7ccb2;
+}
+
+@media (max-width: 768px) {
+  .side {
+    width: 90%;
+    margin: 0 auto;
+    min-width: 57px;
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 320px) {
+  .side {
+    max-width: 300px;
+  }
 }
 
 .sub-title {
   font-size: 20px;
   color: #fff;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .sub-title {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 320px) {
+  .sub-title {
+    display: none;
+  }
 }
 
 ul.sub-menu {
@@ -1244,13 +1407,46 @@ ul.sub-menu {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  ul.sub-menu {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  ul.sub-menu {
+    display: none;
+  }
+}
+
 ul.sub-menu li {
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  ul.sub-menu li {
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 320px) {
+  ul.sub-menu li {
+    display: none;
+  }
 }
 
 ul.sub-menu li a {
   font-size: 16px;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  ul.sub-menu li a {
+    font-size: 30%;
+  }
 }
 
 ul.sns {
@@ -1262,10 +1458,54 @@ ul.sns {
   padding-left: 35px;
 }
 
+@media (max-width: 768px) {
+  ul.sns {
+    padding: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  ul.sns {
+    margin: 0 auto;
+    padding-top: 1%;
+  }
+}
+
+@media (max-width: 768px) {
+  ul.sns li {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  ul.sns li {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    text-align: center;
+  }
+}
+
 .sns img {
   height: 30px;
   width: 30px;
   margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .sns img {
+    width: 80%;
+    height: auto;
+    margin: 10%;
+  }
+}
+
+@media (max-width: 320px) {
+  .sns img {
+    width: 30%;
+  }
 }
 
 /* フッター
@@ -1949,60 +2189,6 @@ ul.sns {
     height: 2px;
     top: 304px;
   }
-  /* サイドバー(タブレット) */
-  .side-wrapper {
-    width: 30%;
-    height: auto;
-    background-color: #b7ccb2;
-    margin-left: 1%;
-  }
-  .side {
-    width: 90%;
-    margin: 0 auto;
-    min-width: 57px;
-    max-width: 80px;
-  }
-  .sub-title {
-    font-size: 80%;
-    color: #fff;
-    text-align: center;
-  }
-  ul.sub-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
-    /* background: #ffffe0; */
-  }
-  ul.sub-menu li {
-    text-align: left;
-    margin: 0 auto;
-    margin-bottom: 5%;
-    /* background: #ff6347; */
-  }
-  ul.sub-menu li a {
-    font-size: 30%;
-    color: #fff;
-  }
-  ul.sns {
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* SNSアイコンを横並びに(タブレット) */
-    padding: 0;
-  }
-  ul.sns li {
-    display: inline-block;
-    width: 50%;
-    height: auto;
-    /* background: #000; */
-  }
-  ul.sns img {
-    width: 80%;
-    height: auto;
-    margin: 10%;
-  }
 }
 
 /* --------------- ↑タブレットメディアクエリ --------------- */
@@ -2336,43 +2522,6 @@ ul.sns {
     width: 100%;
     height: 2px;
     top: 304px;
-  }
-  /* サイドバー(スマートフォン) */
-  .side-wrapper {
-    width: 100%;
-    margin-left: unset;
-  }
-  .side {
-    max-width: 300px;
-  }
-  .sub-title {
-    display: none;
-  }
-  ul.sub-menu {
-    display: none;
-  }
-  ul.sub-menu li {
-    display: none;
-  }
-  ul.sns {
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    /* SNSアイコンを横並びに(スマートフォン) */
-    margin: 0 auto;
-    padding-top: 1%;
-  }
-  ul.sns li {
-    display: inline-block;
-    width: 50%;
-    height: auto;
-    text-align: center;
-  }
-  ul.sns img {
-    width: 30%;
-    height: auto;
-    margin: 10%;
   }
 }
 
