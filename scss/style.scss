@@ -2,6 +2,7 @@
 
 @import "./mixin";
 @import "./menu";
+@import "./location";
 @import "./common/header";
 @import "./common/footer";
 @import "./common/sidebar";
@@ -362,30 +363,63 @@ img {
   margin-bottom: 10px;
   background-color: #F1F0EA;
   position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
 }
 
 .location-wrapper {
   display: flex;
   justify-content: space-between;
+  @include breakpoint( tablet ) {
+    justify-content: unset;
+    flex-direction: column;
+  }
 }
 
 .location-box {
   width: 480px;
   height: 200px;
+  @include breakpoint( tablet ) {
+    min-width: 261px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 .location-info {
   width: 300px;
   margin: 28px 90px;
+  @include breakpoint( tablet ) {
+    margin: 0 auto;
+    width: 100px;
+    min-width: 250px;
+  } 
 }
 
 dt {
   float: left;
   width: 100px;
+  @include breakpoint( tablet ) {
+    font-size: 90%;
+  }
+}
+
+dd {
+  @include breakpoint( tablet ) {
+  font-size: 90%;
+  margin: 0;
+  }
 }
 
 .location-map {
   width: 74%;
+  @include breakpoint( tablet ) {
+    width: 100%;
+  }
 }
 
 iframe {
@@ -400,6 +434,13 @@ iframe {
   height: 2px;
   border-radius: 9px;
   top: 204px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    top: 101%;
+  }
+  @include breakpoint( sp ) {
+    top: 102%;
+  }
 }
 
 
@@ -1155,58 +1196,10 @@ ul {
 
   /* 店舗情報・地図(タブレット) */
 
-  #location {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    background-color: #F1F0EA;
-    position: relative;
-  }
 
-  .location-wrapper {
-    display: flex;
-    justify-content: unset;
-    flex-direction: column;
-  }
-
-  .location-box {
-    min-width: 261px;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .location-info {
-    margin: 0 auto;
-    width: 100px;
-    min-width: 250px;
-  }
-
-  dd {
-    font-size: 90%;
-    margin: 0;
-    /* background: #ffffe0; */
-  }
-
-  dt {
-    font-size: 90%;
-    float: left;
-    width: 100px;
-  }
-
-  .location-map, iframe {
-    width: 100%;
-  }
-
-  #location::after {
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: 101%;
-  }
+  
+    
+  
 
   /* お問い合わせ(タブレット) */
 
@@ -1544,60 +1537,7 @@ ul {
     top: 101.3%;
   }
 
-  /* 店舗情報・地図(スマートフォン) */
-
-  #location {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    background-color: #F1F0EA;
-    position: relative;
-  }
-
-  .location-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .location-box {
-    min-width: 261px;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .location-info {
-    margin: 0 auto;
-    width: 100px;
-    min-width: 250px;
-  }
-
-  dd {
-    font-size: 90%;
-    margin: 0;
-
-    /* background: #ffffe0; */
-  }
-
-  dt {
-    font-size: 90%;
-    float: left;
-    width: 100px;
-  }
-
-  .location-map, iframe {
-    width: 100%;
-  }
-
-  #location::after {
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: 102%;
-  }
+  
 
   /* お問い合わせ(スマートフォン) */
 
