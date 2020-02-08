@@ -1,38 +1,72 @@
+
 .menu-wrapper-grid {
+  width: 1080px;
   background: #fff;
   height: auto;
-  &::before {
-    content: none;
-  }
-  &-title {
-    color: #31251c;
-  }
-  
-  &-images {
-    display: block;
-  }
-  &-commentary {
-    display: flex;
-    flex-direction: column;
-    > .bread-name {
-      font-size: 1.5em;
-      width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+    &::before {
+      content: none;
+        position: absolute;
     }
+}
+
+  .menu-box {
+    widows: 1060px;
+    height: auto;
+    background: #fd7e00;
   }
-  }
 
-.anpan,
-.plain-bread {
-  float: left;
-}
+    .menu-title {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      color: #31251c;
 
-.croissant,
-.sweet-bread {
-  float: right;
-}
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #b7ccb2;
+        width: 150px;
+        height: 3px;
+        border-radius: 9px;
+        top: 32px;
+        left: 470px;
+        display: inline-block;
+      }
+    }
+    
+    .menu-images {
+      display: block;
+    
+      img {
+        widows: 150px;
+        height: 150px;
+      }
+    }
 
-figcaption {
-  width: 80%;
-  height: 50%;
-}
+      .menu-commentary-box-right,
+        .menu-commentary-box-left {
+          width: 800px;
+          height: 200px;
+        }
+
+        .menu-commentary-right,
+          .menu-commentary-left {
+            display: flex;
+            flex-direction: column;
+            > .bread-name {
+              font-size: 1.5em;
+              width: 200px;
+            }
+          }
+    
+
+
+
+  
+
+  
 

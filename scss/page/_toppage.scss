@@ -133,12 +133,12 @@
     left: 0;
   }
   
-  .menu-box {
+  .toppage-menu-box {
     width: 80%;
     margin: 0 auto;
   }
   
-  .menu-title {
+  .toppage-menu-title {
     font-size: 20px;
     text-align: center;
     margin-top: 26px;
@@ -146,12 +146,12 @@
     color: #ffffff;
   }
   
-  .menu-images {
+  .toppage-menu-images {
     display: flex;
     align-items: center; /* 画像を中央付近にまとめる */
   }
   
-  .menu-images img {
+  .toppage-menu-images img {
     width: 150px;
     height: 150px;
     object-fit: cover; /* 画像を中央でトリミング */

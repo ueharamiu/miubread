@@ -1,22 +1,61 @@
 @charset "UTF-8";
 .menu-wrapper-grid {
+  width: 1080px;
   background: #fff;
   height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .menu-wrapper-grid::before {
   content: none;
+  position: absolute;
 }
 
-.menu-wrapper-grid-title {
+.menu-box {
+  widows: 1060px;
+  height: auto;
+  background: #fd7e00;
+}
+
+.menu-title {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 26px;
+  margin-bottom: 10px;
   color: #31251c;
 }
 
-.menu-wrapper-grid-images {
+.menu-title::after {
+  content: '';
+  position: absolute;
+  background-color: #b7ccb2;
+  width: 150px;
+  height: 3px;
+  border-radius: 9px;
+  top: 32px;
+  left: 470px;
+  display: inline-block;
+}
+
+.menu-images {
   display: block;
 }
 
-.menu-wrapper-grid-commentary {
+.menu-images img {
+  widows: 150px;
+  height: 150px;
+}
+
+.menu-commentary-box-right,
+.menu-commentary-box-left {
+  width: 800px;
+  height: 200px;
+}
+
+.menu-commentary-right,
+.menu-commentary-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,24 +65,10 @@
           flex-direction: column;
 }
 
-.menu-wrapper-grid-commentary > .bread-name {
+.menu-commentary-right > .bread-name,
+.menu-commentary-left > .bread-name {
   font-size: 1.5em;
   width: 200px;
-}
-
-.anpan,
-.plain-bread {
-  float: left;
-}
-
-.croissant,
-.sweet-bread {
-  float: right;
-}
-
-figcaption {
-  width: 80%;
-  height: 50%;
 }
 
 /* HEADER
@@ -692,12 +717,12 @@ ul.sns {
   left: 0;
 }
 
-.menu-box {
+.toppage-menu-box {
   width: 80%;
   margin: 0 auto;
 }
 
-.menu-title {
+.toppage-menu-title {
   font-size: 20px;
   text-align: center;
   margin-top: 26px;
@@ -705,7 +730,7 @@ ul.sns {
   color: #ffffff;
 }
 
-.menu-images {
+.toppage-menu-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -715,7 +740,7 @@ ul.sns {
   /* 画像を中央付近にまとめる */
 }
 
-.menu-images img {
+.toppage-menu-images img {
   width: 150px;
   height: 150px;
   -o-object-fit: cover;
@@ -1153,6 +1178,8 @@ ul.main-nav li:nth-child(1)::before {
 }
 
 /* 商品メニュー(index.html) */
+/*
+
 .menu-wrapper-grid {
   width: 1080px;
   height: 300px;
@@ -1160,18 +1187,20 @@ ul.main-nav li:nth-child(1)::before {
   margin-bottom: 10px;
   background-color: #9B826C;
   position: relative;
-}
 
-.menu-wrapper-grid::before {
-  /* 上に灰色の横線を配置 */
-  content: '';
-  position: absolute;
-  background-color: #d0d0d0;
-  width: 1080px;
-  height: 2px;
-  border-radius: 9px;
-  top: -6px;
-  left: 0;
+  &::before {
+    */
+/* 上に灰色の横線を配置 */
+/*
+    content: '';
+    position: absolute;
+    background-color: #d0d0d0;
+    width: 1080px;
+    height: 2px;
+    border-radius: 9px;
+    top: -6px;
+    left: 0;
+  }
 }
 
 .menu-box {
@@ -1188,25 +1217,22 @@ ul.main-nav li:nth-child(1)::before {
 }
 
 .menu-images {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* 画像を中央付近にまとめる */
-}
-
-.menu-images img {
-  width: 150px;
-  height: 150px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* 画像を中央でトリミング */
-}
-
+  align-items: center;
+  */
+/* 画像を中央付近にまとめる */
+/*
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像を中央でトリミング */
+/*
+  } 
+} */
+/*
 .menu-wrapper-grid::after {
   /* 下に灰色の横線を配置 */
+/*
   content: '';
   position: absolute;
   background-color: #d0d0d0;
@@ -1215,7 +1241,7 @@ ul.main-nav li:nth-child(1)::before {
   border-radius: 9px;
   top: 304px;
 }
-
+*/
 /* 店舗情報・地図 */
 #location {
   width: 1080px;
@@ -2031,17 +2057,17 @@ ul.sns {
     top: -6px;
     left: 0;
   }
-  .menu-box {
+  .toppage-menu-box {
     min-width: 261px;
   }
-  .menu-title {
+  .toppage-menu-title {
     font-size: 95%;
     text-align: center;
     margin-top: 4%;
     margin-bottom: 10px;
     color: #ffffff;
   }
-  .menu-images {
+  .toppage-menu-images {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2061,7 +2087,7 @@ ul.sns {
     text-align: center;
     font-size: 80%;
   }
-  .menu-images figure img {
+  .toppage-menu-images figure img {
     width: 100%;
     height: 100%;
     min-width: 50px;
@@ -2368,17 +2394,17 @@ ul.sns {
     top: -6px;
     left: 0;
   }
-  .menu-box {
+  .toppage-menu-box {
     min-width: 261px;
   }
-  .menu-title {
+  .toppage-menu-title {
     font-size: 95%;
     text-align: center;
     margin-top: 4%;
     margin-bottom: 10px;
     color: #ffffff;
   }
-  .menu-images {
+  .toppage-menu-images {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2398,7 +2424,7 @@ ul.sns {
     text-align: center;
     font-size: 80%;
   }
-  .menu-images figure img {
+  .toppage-menu-images figure img {
     width: 100%;
     height: 100%;
     min-width: 50px;
