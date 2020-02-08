@@ -3,6 +3,7 @@
 @import "./mixin";
 @import "./menu";
 @import "./location";
+@import "./contact";
 @import "./common/header";
 @import "./common/footer";
 @import "./common/sidebar";
@@ -10,7 +11,6 @@
 
 
 /* 共通部分 */
-
 html {
   font-size: 100%;
   @include breakpoint( tablet ) {
@@ -449,9 +449,10 @@ iframe {
   width: 1080px;
   height: 300px;
   margin-bottom: 10px;
-
-  /* background-color: #0091aa; */
   position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+  }
 }
 
 .page-title {
@@ -475,7 +476,8 @@ label {
 }
 
 input {
-  &[type="text"], &[type="email"] {
+  &[type="text"], 
+  &[type="email"] {
     border: 1px #31251c solid;
     border-radius: 5px;
     padding: 5px;
@@ -489,7 +491,8 @@ textarea {
 }
 
 input {
-  &[type="text"], &[type="email"] {
+  &[type="text"], 
+  &[type="email"] {
     width: 100%;
     max-width: 200px;
   }
@@ -507,14 +510,16 @@ input[type="submit"] {
   line-height: 1.5;
 }
 
-.contact-wrapper::after {
-  /* 下に灰色の横線を配置 */
+.contact-wrapper::after { /* 下に灰色の横線を配置 */
   content: '';
   position: absolute;
   background-color: #d0d0d0;
   width: 1080px;
   height: 2px;
   top: 304px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+  }
 }
 
 /* サイドバー */
@@ -1194,81 +1199,9 @@ ul {
     top: 100.6%;
   }
 
-  /* 店舗情報・地図(タブレット) */
 
 
   
-    
-  
-
-  /* お問い合わせ(タブレット) */
-
-  .contact-wrapper {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 10px;
-    position: relative;
-
-    /* background: #0091aa; */
-  }
-
-  .page-title {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  form div {
-    margin-bottom: 5.5px;
-  }
-
-  label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
-  }
-
-  input {
-    &[type="text"], &[type="email"] {
-      border: 1px #31251c solid;
-      border-radius: 5px;
-      padding: 5px;
-    }
-  }
-
-  textarea {
-    border: 1px #31251c solid;
-    border-radius: 5px;
-    padding: 5px;
-  }
-
-  input {
-    &[type="text"], &[type="email"] {
-      width: 100%;
-      max-width: 200px;
-    }
-  }
-
-  textarea {
-    width: 100%;
-    max-width: 600px;
-    height: 1.875rem;
-  }
-
-  input[type="submit"] {
-    border: none;
-    cursor: pointer;
-    line-height: 1.5;
-  }
-
-  .contact-wrapper::after {
-    /* 下に灰色の横線を配置(タブレット) */
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    top: 304px;
-  }
 
 }
 
