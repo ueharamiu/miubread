@@ -1,4 +1,284 @@
 @charset "UTF-8";
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+    min-width: 261px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    display: block;
+  }
+}
+
+.h2 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .text1, .text2 {
+    text-align: initial;
+    font-size: 80%;
+    padding: 4.5%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+/* お知らせ */
+.post-info {
+  width: 1040px;
+  height: 110px;
+  padding: 10px 20px 30px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .post-info {
+    width: 100%;
+    height: auto;
+    padding: 3% 3% 4%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+.post-info::before {
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: 154px;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .post-info::before {
+    content: '';
+    width: 100%;
+    top: 101.9%;
+  }
+}
+
+.post-title {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 30px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 95%;
+    margin: auto;
+  }
+}
+
+.post-title::after {
+  content: '';
+  position: absolute;
+  background-color: #b7ccb2;
+  width: 100px;
+  height: 3px;
+  border-radius: 9px;
+  top: 32px;
+  left: 45%;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .post-title::after {
+    width: 15.154%;
+    top: 110%;
+    left: 42.5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .post-title::after {
+    width: 31%;
+    left: 34%;
+  }
+}
+
+/* こだわり、お店の特徴の親要素 */
+.f-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .f-container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .f-container {
+    display: block;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+/* こだわり */
+.commitment {
+  width: 515px;
+  height: 160px;
+  padding: 10px 10px 30px;
+}
+
+@media (max-width: 768px) {
+  .commitment {
+    width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+  }
+}
+
+@media (max-width: 320px) {
+  .commitment {
+    max-width: 320px;
+  }
+}
+
+.commitment-title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .commitment-title {
+    font-size: 95%;
+    margin: auto;
+  }
+}
+
+.commitment-title::after {
+  content: '';
+  position: absolute;
+  background-color: #b7ccb2;
+  width: 100px;
+  height: 3px;
+  border-radius: 9px;
+  top: 32px;
+  left: 205px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .commitment-title::after {
+    width: 31%;
+    top: 110%;
+    left: 34%;
+  }
+}
+
+/* お店の特徴 */
+@media (max-width: 768px) {
+  .item2 {
+    position: relative;
+  }
+  .item2::before {
+    content: '';
+    position: absolute;
+    background: #d0d0d0;
+    width: 2px;
+    height: 100%;
+    border-radius: 9px;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 320px) {
+  .item2::before {
+    width: 100%;
+    height: 2px;
+    top: -2.5%;
+  }
+}
+
+.point {
+  width: 515px;
+  height: 160px;
+  padding: 10px 10px 30px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .point {
+    width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: 0;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+  }
+}
+
+@media (max-width: 320px) {
+  .point {
+    margin-top: 3%;
+    max-width: 320px;
+  }
+}
+
+.point-title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .point-title {
+    font-size: 95%;
+    margin: auto;
+  }
+}
+
+.point-title::after {
+  content: '';
+  position: absolute;
+  background-color: #b7ccb2;
+  width: 140px;
+  height: 3px;
+  border-radius: 9px;
+  top: 32px;
+  left: 185px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .point-title::after {
+    width: 30%;
+    top: 110%;
+    left: 35%;
+  }
+}
+
 .menu-wrapper-grid {
   width: 1080px;
   background: #fff;
