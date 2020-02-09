@@ -1269,8 +1269,31 @@ ul.main-nav li:nth-child(1)::before {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+    min-width: 261px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    display: block;
+  }
+}
+
 .h2 {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .text1, .text2 {
+    text-align: initial;
+    font-size: 80%;
+    padding: 4.5%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 /* お知らせ */
@@ -1280,7 +1303,16 @@ ul.main-nav li:nth-child(1)::before {
   padding: 10px 20px 30px;
   margin-bottom: 10px;
   position: relative;
-  /* background-color: #F57553; */
+}
+
+@media (max-width: 768px) {
+  .post-info {
+    width: 100%;
+    height: auto;
+    padding: 3% 3% 4%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 .post-info::before {
@@ -1294,11 +1326,26 @@ ul.main-nav li:nth-child(1)::before {
   left: 0;
 }
 
+@media (max-width: 768px) {
+  .post-info::before {
+    content: '';
+    width: 100%;
+    top: 101.9%;
+  }
+}
+
 .post-title {
   text-align: center;
   font-size: 20px;
   margin: 10px 30px;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .post-title {
+    font-size: 95%;
+    margin: auto;
+  }
 }
 
 .post-title::after {
@@ -1313,6 +1360,21 @@ ul.main-nav li:nth-child(1)::before {
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .post-title::after {
+    width: 15.154%;
+    top: 110%;
+    left: 42.5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .post-title::after {
+    width: 31%;
+    left: 34%;
+  }
+}
+
 /* こだわり、お店の特徴の親要素 */
 .f-container {
   display: -webkit-box;
@@ -1322,18 +1384,57 @@ ul.main-nav li:nth-child(1)::before {
       flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .f-container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .f-container {
+    display: block;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 /* こだわり */
 .commitment {
   width: 515px;
   height: 160px;
   padding: 10px 10px 30px;
-  /* background-color: #F5A053; */
+}
+
+@media (max-width: 768px) {
+  .commitment {
+    width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+  }
+}
+
+@media (max-width: 320px) {
+  .commitment {
+    max-width: 320px;
+  }
 }
 
 .commitment-title {
   font-size: 20px;
   text-align: center;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .commitment-title {
+    font-size: 95%;
+    margin: auto;
+  }
 }
 
 .commitment-title::after {
@@ -1348,19 +1449,76 @@ ul.main-nav li:nth-child(1)::before {
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .commitment-title::after {
+    width: 31%;
+    top: 110%;
+    left: 34%;
+  }
+}
+
 /* お店の特徴 */
+@media (max-width: 768px) {
+  .item2 {
+    position: relative;
+  }
+  .item2::before {
+    content: '';
+    position: absolute;
+    background: #d0d0d0;
+    width: 2px;
+    height: 100%;
+    border-radius: 9px;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 320px) {
+  .item2::before {
+    width: 100%;
+    height: 2px;
+    top: -2.5%;
+  }
+}
+
 .point {
   width: 515px;
   height: 160px;
   padding: 10px 10px 30px;
   margin-left: 10px;
-  /* background-color: #F5C553; */
+}
+
+@media (max-width: 768px) {
+  .point {
+    width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: 0;
+    padding: 3% 3% 5%;
+    min-width: 130.5px;
+    max-width: 340.165px;
+  }
+}
+
+@media (max-width: 320px) {
+  .point {
+    margin-top: 3%;
+    max-width: 320px;
+  }
 }
 
 .point-title {
   font-size: 20px;
   text-align: center;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .point-title {
+    font-size: 95%;
+    margin: auto;
+  }
 }
 
 .point-title::after {
@@ -1373,6 +1531,14 @@ ul.main-nav li:nth-child(1)::before {
   top: 32px;
   left: 185px;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .point-title::after {
+    width: 30%;
+    top: 110%;
+    left: 35%;
+  }
 }
 
 /* 商品メニュー(index.html) */
@@ -2186,138 +2352,6 @@ ul.sns {
   /*------------ ↑ハンバーガーメニュー ---------------*/
   /* CONTENTS(タブレット)
   ----------------------------- */
-  .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 100%;
-    min-width: 261px;
-    margin: 0 auto;
-  }
-  .h2 {
-    text-align: center;
-  }
-  .text1, .text2 {
-    text-align: initial;
-    font-size: 80%;
-    padding: 4.5%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  /* お知らせ(タブレット) */
-  .post-info {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    padding: 3% 3% 4%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    position: relative;
-    /* background-color: #F57553; */
-  }
-  .post-info::before {
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: 101.9%;
-    left: 0;
-  }
-  .post-title {
-    font-size: 95%;
-    margin: auto;
-    position: relative;
-  }
-  .post-title::after {
-    content: '';
-    position: absolute;
-    background-color: #b7ccb2;
-    width: 15.154%;
-    height: 3px;
-    border-radius: 9px;
-    top: 110%;
-    left: 42.5%;
-    display: inline-block;
-  }
-  /* こだわり、お店の特徴の親要素(タブレット) */
-  .f-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  /* こだわり(タブレット) */
-  .commitment {
-    width: 100%;
-    height: auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 3% 3% 5%;
-    min-width: 130.5px;
-    max-width: 340.165px;
-    /* background-color: #F5A053; */
-  }
-  .commitment-title {
-    font-size: 95%;
-    text-align: center;
-    margin: auto;
-    position: relative;
-  }
-  .commitment-title::after {
-    content: '';
-    position: absolute;
-    background-color: #b7ccb2;
-    width: 31%;
-    height: 3px;
-    border-radius: 9px;
-    top: 110%;
-    left: 34%;
-    display: inline-block;
-  }
-  /* お店の特徴(タブレット) */
-  .item2 {
-    position: relative;
-  }
-  .item2::before {
-    content: '';
-    position: absolute;
-    background: #d0d0d0;
-    width: 2px;
-    height: 100%;
-    border-radius: 9px;
-    top: auto;
-  }
-  .point {
-    width: 100%;
-    height: auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin-left: 0;
-    padding: 3% 3% 5%;
-    min-width: 130.5px;
-    max-width: 340.165px;
-    /* background: #F5C553; */
-  }
-  .point-title {
-    font-size: 95%;
-    text-align: center;
-    margin: auto;
-    position: relative;
-  }
-  .point-title::after {
-    content: '';
-    position: absolute;
-    background-color: #b7ccb2;
-    width: 30%;
-    height: 3px;
-    border-radius: 9px;
-    top: 110%;
-    left: 35%;
-    display: inline-block;
-  }
   /* 商品メニュー(タブレット) */
   .toppage-menu-wrapper-grid {
     width: 100%;
@@ -2418,136 +2452,6 @@ ul.sns {
   /*------------ ↑ハンバーガーメニュー ---------------*/
   /* CONTENTS(スマートフォン)
   ----------------------------- */
-  .wrapper {
-    display: block;
-    max-width: 100%;
-    min-width: 261px;
-    margin: 0 auto;
-  }
-  .h2 {
-    text-align: center;
-  }
-  .text1, .text2 {
-    text-align: initial;
-    font-size: 80%;
-    padding: 4.5%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  /* お知らせ(スマートフォン) */
-  .post-info {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    padding: 3% 3% 4%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    position: relative;
-    /* background-color: #F57553; */
-  }
-  .post-info::before {
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: 101.9%;
-    left: 0;
-  }
-  .post-title {
-    text-align: center;
-    font-size: 95%;
-    margin: auto;
-    position: relative;
-  }
-  .post-title::after {
-    content: '';
-    position: absolute;
-    background-color: #b7ccb2;
-    width: 31%;
-    height: 3px;
-    border-radius: 9px;
-    top: 110%;
-    left: 34%;
-    display: inline-block;
-  }
-  /* こだわり、お店の特徴の親要素(スマートフォン) */
-  .f-container {
-    display: block;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  /* こだわり(スマートフォン) */
-  .commitment {
-    width: 100%;
-    height: auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 3% 3% 5%;
-    min-width: 130.5px;
-    max-width: 320px;
-    /* background-color: #F5A053; */
-  }
-  .commitment-title {
-    font-size: 95%;
-    text-align: center;
-    margin: auto;
-    position: relative;
-  }
-  .commitment-title::after {
-    content: '';
-    position: absolute;
-    background-color: #b7ccb2;
-    width: 31%;
-    height: 3px;
-    border-radius: 9px;
-    top: 110%;
-    left: 34%;
-    display: inline-block;
-  }
-  /* お店の特徴(スマートフォン) */
-  .item2 {
-    position: relative;
-  }
-  .item2::before {
-    content: '';
-    position: absolute;
-    background: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: -2.5%;
-  }
-  .point {
-    width: 100%;
-    height: auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin-top: 3%;
-    margin-left: 0;
-    padding: 3% 3% 5%;
-    min-width: 130.5px;
-    max-width: 320px;
-    /* background: #F5C553; */
-  }
-  .point-title {
-    font-size: 95%;
-    text-align: center;
-    margin: auto;
-    position: relative;
-  }
-  .point-title::after {
-    content: '';
-    position: absolute;
-    background-color: #b7ccb2;
-    width: 30%;
-    height: 3px;
-    border-radius: 9px;
-    top: 110%;
-    left: 35%;
-    display: inline-block;
-  }
   /* 商品メニュー(スマートフォン) */
   .toppage-menu-wrapper-grid {
     width: 100%;
