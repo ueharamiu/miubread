@@ -2801,59 +2801,6 @@ ul.sns {
     border-radius: 9px;
     top: 101.3%;
   }
-  /* お問い合わせ(スマートフォン) */
-  .contact-wrapper {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 10px;
-    position: relative;
-    /* background: #0091aa; */
-  }
-  .page-title {
-    font-size: 20px;
-    text-align: center;
-  }
-  form div {
-    margin-bottom: 5.5px;
-  }
-  label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
-  }
-  input[type="text"], input[type="email"] {
-    border: 1px #31251c solid;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  textarea {
-    border: 1px #31251c solid;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  input[type="text"], input[type="email"] {
-    width: 100%;
-    max-width: 200px;
-  }
-  textarea {
-    width: 100%;
-    max-width: 600px;
-    height: 1.875rem;
-  }
-  input[type="submit"] {
-    border: none;
-    cursor: pointer;
-    line-height: 1.5;
-  }
-  .contact-wrapper::after {
-    /* 下に灰色の横線を配置(スマートフォン) */
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    top: 304px;
-  }
 }
 
 /* --------------- ↑スマートフォンメディアクエリ --------------- */
