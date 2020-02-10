@@ -1822,37 +1822,52 @@ ul.main-nav li:nth-child(1)::before {
 }
 
 /* 商品メニュー(index.html) */
-/*
-
-.menu-wrapper-grid {
+.toppage-menu-wrapper-grid {
   width: 1080px;
   height: 300px;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #9B826C;
   position: relative;
+}
 
-  &::before {
-    */
-/* 上に灰色の横線を配置 */
-/*
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 1080px;
-    height: 2px;
-    border-radius: 9px;
-    top: -6px;
-    left: 0;
+@media (max-width: 768px) {
+  .toppage-menu-wrapper-grid {
+    width: 100%;
+    height: auto;
   }
 }
 
-.menu-box {
+.toppage-menu-wrapper-grid::before {
+  /* 上に灰色の横線を配置 */
+  content: '';
+  position: absolute;
+  background-color: #d0d0d0;
+  width: 1080px;
+  height: 2px;
+  border-radius: 9px;
+  top: -6px;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .toppage-menu-wrapper-grid::before {
+    width: 100%;
+  }
+}
+
+.toppage-menu-box {
   width: 80%;
   margin: 0 auto;
 }
 
-.menu-title {
+@media (max-width: 768px) {
+  .toppage-menu-box {
+    min-width: 261px;
+  }
+}
+
+.toppage-menu-title {
   font-size: 20px;
   text-align: center;
   margin-top: 26px;
@@ -1860,23 +1875,73 @@ ul.main-nav li:nth-child(1)::before {
   color: #ffffff;
 }
 
-.menu-images {
+@media (max-width: 768px) {
+  .toppage-menu-title {
+    font-size: 95%;
+    margin-top: 4%;
+  }
+}
+
+.toppage-menu-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  */
-/* 画像を中央付近にまとめる */
-/*
-  img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* 画像を中央でトリミング */
-/*
-  } 
-} */
-/*
-.menu-wrapper-grid::after {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 画像を中央付近にまとめる */
+}
+
+@media (max-width: 768px) {
+  .toppage-menu-images {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-width: 249px;
+    max-width: 598px;
+  }
+}
+
+.toppage-menu-images img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* 画像を中央でトリミング */
+}
+
+@media (max-width: 768px) {
+  figure {
+    width: 40%;
+    height: 50%;
+    min-width: 100.0012px;
+    margin: 5%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  figcaption {
+    text-align: center;
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .toppage-menu-images figure img {
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 200px;
+    max-height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    /* 画像を中央でトリミング(タブレット) */
+  }
+}
+
+.toppage-menu-wrapper-grid::after {
   /* 下に灰色の横線を配置 */
-/*
   content: '';
   position: absolute;
   background-color: #d0d0d0;
@@ -1885,7 +1950,20 @@ ul.main-nav li:nth-child(1)::before {
   border-radius: 9px;
   top: 304px;
 }
-*/
+
+@media (max-width: 768px) {
+  .toppage-menu-wrapper-grid::after {
+    width: 100%;
+    top: 100.6%;
+  }
+}
+
+@media (max-width: 320px) {
+  .toppage-menu-wrapper-grid::after {
+    top: 101.3%;
+  }
+}
+
 /* 店舗情報・地図 */
 #location {
   width: 1080px;
@@ -2632,75 +2710,6 @@ ul.sns {
   /*------------ ↑ハンバーガーメニュー ---------------*/
   /* CONTENTS(タブレット)
   ----------------------------- */
-  /* 商品メニュー(タブレット) */
-  .toppage-menu-wrapper-grid {
-    width: 100%;
-    height: auto;
-    position: relative;
-    background-color: #9B826C;
-  }
-  .toppage-menu-wrapper-grid::before {
-    /* 上に灰色の横線を配置(タブレット) */
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: -6px;
-    left: 0;
-  }
-  .toppage-menu-box {
-    min-width: 261px;
-  }
-  .toppage-menu-title {
-    font-size: 95%;
-    text-align: center;
-    margin-top: 4%;
-    margin-bottom: 10px;
-    color: #ffffff;
-  }
-  .toppage-menu-images {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    min-width: 249px;
-    max-width: 598px;
-  }
-  figure {
-    width: 40%;
-    height: 50%;
-    min-width: 100.0012px;
-    margin: 5%;
-    text-align: center;
-  }
-  figcaption {
-    text-align: center;
-    font-size: 80%;
-  }
-  .toppage-menu-images figure img {
-    width: 100%;
-    height: 100%;
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 200px;
-    max-height: 200px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    /* 画像を中央でトリミング(タブレット) */
-  }
-  .toppage-menu-wrapper-grid::after {
-    /* 下に灰色の横線を配置(タブレット) */
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: 100.6%;
-  }
 }
 
 /* --------------- ↑タブレットメディアクエリ --------------- */
@@ -2730,77 +2739,6 @@ ul.sns {
     position: relative;
   }
   /*------------ ↑ハンバーガーメニュー ---------------*/
-  /* CONTENTS(スマートフォン)
-  ----------------------------- */
-  /* 商品メニュー(スマートフォン) */
-  .toppage-menu-wrapper-grid {
-    width: 100%;
-    height: auto;
-    position: relative;
-    background-color: #9B826C;
-  }
-  .toppage-menu-wrapper-grid::before {
-    /* 上に灰色の横線を配置(スマートフォン) */
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: -6px;
-    left: 0;
-  }
-  .toppage-menu-box {
-    min-width: 261px;
-  }
-  .toppage-menu-title {
-    font-size: 95%;
-    text-align: center;
-    margin-top: 4%;
-    margin-bottom: 10px;
-    color: #ffffff;
-  }
-  .toppage-menu-images {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    min-width: 249px;
-    max-width: 598px;
-  }
-  figure {
-    width: 40%;
-    height: 50%;
-    min-width: 100.0012px;
-    margin: 5%;
-    text-align: center;
-  }
-  figcaption {
-    text-align: center;
-    font-size: 80%;
-  }
-  .toppage-menu-images figure img {
-    width: 100%;
-    height: 100%;
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 200px;
-    max-height: 200px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    /* 画像を中央でトリミング(スマートフォン) */
-  }
-  .toppage-menu-wrapper-grid::after {
-    /* 下に灰色の横線を配置(スマートフォン) */
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: 101.3%;
-  }
 }
 
 /* --------------- ↑スマートフォンメディアクエリ --------------- */

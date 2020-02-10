@@ -389,20 +389,19 @@ img {
 }
 
 /* 商品メニュー(index.html) */
-/*
-
-.menu-wrapper-grid {
+.toppage-menu-wrapper-grid {
   width: 1080px;
   height: 300px;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #9B826C;
   position: relative;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+  }
 
-  &::before {
-    */
-    /* 上に灰色の横線を配置 */
-    /*
+  &::before { /* 上に灰色の横線を配置 */
     content: '';
     position: absolute;
     background-color: #d0d0d0;
@@ -411,40 +410,78 @@ img {
     border-radius: 9px;
     top: -6px;
     left: 0;
+    @include breakpoint( tablet ) {
+      width: 100%;
+    }
   }
 }
 
-.menu-box {
+.toppage-menu-box {
   width: 80%;
   margin: 0 auto;
+  @include breakpoint( tablet ) {
+    min-width: 261px;
+  }
 }
 
-.menu-title {
+.toppage-menu-title {
   font-size: 20px;
   text-align: center;
   margin-top: 26px;
   margin-bottom: 10px;
   color: #ffffff;
+  @include breakpoint( tablet ) {
+    font-size: 95%;
+    margin-top: 4%;
+  }
 }
 
-.menu-images {
+.toppage-menu-images {
   display: flex;
-  align-items: center;
-  */
+  align-items: center; /* 画像を中央付近にまとめる */
+  @include breakpoint( tablet ) {
+    flex-wrap: wrap;
+    min-width: 249px;
+    max-width: 598px;
+  }
 
-  /* 画像を中央付近にまとめる */
-/*
   img {
     width: 150px;
     height: 150px;
     object-fit: cover; /* 画像を中央でトリミング */
-/*
   } 
-} */
-/*
-.menu-wrapper-grid::after {
-  /* 下に灰色の横線を配置 */
-  /*
+} 
+
+figure {
+  @include breakpoint( tablet ) {
+    width: 40%;
+    height: 50%;
+    min-width: 100.0012px;
+    margin: 5%;
+    text-align: center;
+  }
+}
+
+figcaption {
+  @include breakpoint( tablet ) {
+    text-align: center;
+    font-size: 80%;
+  }
+}
+
+.toppage-menu-images figure img {
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover; /* 画像を中央でトリミング(タブレット) */
+  }
+}
+
+.toppage-menu-wrapper-grid::after { /* 下に灰色の横線を配置 */
   content: '';
   position: absolute;
   background-color: #d0d0d0;
@@ -452,8 +489,14 @@ img {
   height: 2px;
   border-radius: 9px;
   top: 304px;
+  @include breakpoint( tablet ) {
+    width: 100%;
+    top: 100.6%;
+  }
+  @include breakpoint( sp ) {
+    top: 101.3%;
+  }
 }
-*/
 
 
 /* 店舗情報・地図 */
@@ -1079,90 +1122,6 @@ ul {
   /* CONTENTS(タブレット)
   ----------------------------- */
 
-  
-      
-   
-
-  /* 商品メニュー(タブレット) */
-
-  .toppage-menu-wrapper-grid {
-    width: 100%;
-    height: auto;
-    position: relative;
-    background-color: #9B826C;
-
-    &::before {
-      /* 上に灰色の横線を配置(タブレット) */
-      content: '';
-      position: absolute;
-      background-color: #d0d0d0;
-      width: 100%;
-      height: 2px;
-      border-radius: 9px;
-      top: -6px;
-      left: 0;
-    }
-  }
-
-  .toppage-menu-box {
-    min-width: 261px;
-  }
-
-  .toppage-menu-title {
-    font-size: 95%;
-    text-align: center;
-    margin-top: 4%;
-    margin-bottom: 10px;
-    color: #ffffff;
-  }
-
-  .toppage-menu-images {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 249px;
-    max-width: 598px;
-  }
-
-  figure {
-    width: 40%;
-    height: 50%;
-    min-width: 100.0012px;
-    margin: 5%;
-    text-align: center;
-  }
-
-  figcaption {
-    text-align: center;
-    font-size: 80%;
-  }
-
-  .toppage-menu-images figure img {
-    width: 100%;
-    height: 100%;
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 200px;
-    max-height: 200px;
-    object-fit: cover;
-
-    /* 画像を中央でトリミング(タブレット) */
-  }
-
-  .toppage-menu-wrapper-grid::after {
-    /* 下に灰色の横線を配置(タブレット) */
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: 100.6%;
-  }
-
-
-
-  
-
 }
 
 /* --------------- ↑タブレットメディアクエリ --------------- */
@@ -1203,86 +1162,6 @@ ul {
 
   /*------------ ↑ハンバーガーメニュー ---------------*/
 
-  /* CONTENTS(スマートフォン)
-  ----------------------------- */
-      
-    
-
-  /* 商品メニュー(スマートフォン) */
-
-  .toppage-menu-wrapper-grid {
-    width: 100%;
-    height: auto;
-    position: relative;
-    background-color: #9B826C;
-
-    &::before {
-      /* 上に灰色の横線を配置(スマートフォン) */
-      content: '';
-      position: absolute;
-      background-color: #d0d0d0;
-      width: 100%;
-      height: 2px;
-      border-radius: 9px;
-      top: -6px;
-      left: 0;
-    }
-  }
-
-  .toppage-menu-box {
-    min-width: 261px;
-  }
-
-  .toppage-menu-title {
-    font-size: 95%;
-    text-align: center;
-    margin-top: 4%;
-    margin-bottom: 10px;
-    color: #ffffff;
-  }
-
-  .toppage-menu-images {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 249px;
-    max-width: 598px;
-  }
-
-  figure {
-    width: 40%;
-    height: 50%;
-    min-width: 100.0012px;
-    margin: 5%;
-    text-align: center;
-  }
-
-  figcaption {
-    text-align: center;
-    font-size: 80%;
-  }
-
-  .toppage-menu-images figure img {
-    width: 100%;
-    height: 100%;
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 200px;
-    max-height: 200px;
-    object-fit: cover;
-
-    /* 画像を中央でトリミング(スマートフォン) */
-  }
-
-  .toppage-menu-wrapper-grid::after {
-    /* 下に灰色の横線を配置(スマートフォン) */
-    content: '';
-    position: absolute;
-    background-color: #d0d0d0;
-    width: 100%;
-    height: 2px;
-    border-radius: 9px;
-    top: 101.3%;
-  }
 }
 
 /* --------------- ↑スマートフォンメディアクエリ --------------- */
