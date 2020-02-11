@@ -12,50 +12,9 @@
     <link href="css/style.css" rel="stylesheet">
     <title>Miu Bread</title>
 
-    <!-- jQuery -->
-    <script src="https:ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!-- 先に jQuery を読み込む -->
-    <script type="text/javascript">
-    $(function() {
-      $('#nav-input').click(function() {
-        $(this).toggleClass('active');
-
-        if($(this).hasClass('active')) {
-          $('.ham_line').addClass('active');
-          $('body').addClass('overflowHidden');
-        } else {
-          $('.ham_line').removeClass('active');
-          $('body').removeClass('overflowHidden');
-        }
-      });
-    });
-    </script>
-  </head>
-
-    <body>
-      <div id="header">
-        <nav>
-          <h1 class="logo"><a href="index.html"><img src="images/logo.svg" alt="Miu Bread ロゴ"></a></h1>
-            <div id="nav-drawer">
-              <input id="nav-input" type="checkbox" class="nav-unshown">
-              <label id="nav-open" for="nav-input">
-                <span class="ham_line ham_line1"></span>
-                <span class="ham_line ham_line2"></span>
-                <span class="ham_line ham_line3"></span>
-              </label>
-              <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-              <div id="nav-content">
-                <ul class="main-nav">
-                  <li><a href="#">こだわり</a></li>
-                  <li><a href="#">お店の特徴</a></li>
-                  <li><a href="#">商品メニュー</a></li>
-                  <li><a href="#">お知らせ</a></li>
-                  <li><a href="#">店舗情報</a></li>
-                  <li><a href="#">お問い合わせ</a></li>
-                </ul>
-              </div> <!-- #nav-content -->
-            </div> <!-- #nav-drawer -->
-        </nav>
-      </div> <!-- header -->
+<?php
+  require('common/header.php');
+?>
 
       <div class="wrapper">
         <div class="contents">
@@ -190,46 +149,15 @@
           </div> <!-- .contact-wrapper -->
         </div> <!-- .contents-->
 
-        <div class="side-wrapper">
-          <div class="side">
-            <h3 class="sub-title">商品メニュー</h3>
-            <nav>
-              <ul class="sub-menu">
-                <li><a href="#">あんぱん</a></li>
-                <li><a href="#">クロワッサン</a></li>
-                <li><a href="#">食パン</a></li>
-                <li><a href="#">菓子パン</a></li>
-              </ul>
-            </nav>
-            <nav>
-              <ul class="sns">
-                <li class="facebook"><img src="images/facebook.jpg" alt="facebook"></li>
-                <li class="twitter"><img src="images/twitter.jpg" alt="twitter"></li>
-                <li class="instagram"><img src="images/instagram.jpg" alt="instagram"></li>
-              </ul>
-            </nav>
-          </div> <!-- .side -->
-        </div> <!-- .side wrapper -->
+<?php
+  require('common/sidebar.php');
+?>        
+
       </div> <!-- #wrapper -->
 
-
-      <footer>
-        <div class="container">
-          <div class="inner">
-            <a href="logo-link"><img class="logo" src="images/logo.svg" alt="Miu Bread ロゴ"></a>
-            <ul class="box">
-              <li><a href="#">こだわり</a></li>
-              <li><a href="#">お店の特徴</a></li>
-              <li><a href="#">商品メニュー</a></li>
-              <li><a href="#">お知らせ</a></li>
-              <li><a href="#">店舗情報</a></li>
-              <li><a href="#">お問い合わせ</a></li>
-            </ul>
-          </div>
-          <p><small>&copy; miu uehara. all rights reserved.</small></p>
-        </div> <!-- .container -->
-      </footer>
+<?php
+  require('common/footer.php');
+?>
 
     </body>
-
 </html>
