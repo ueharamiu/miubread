@@ -28,7 +28,7 @@
                     <img src="images/menu1.jpg" alt="あんぱん">
                       <figcaption class="menu-commentary-box-right">
                         <dl class="menu-commentary-right">
-                          <dt class="bread-name">あんぱん</dt>
+                          <dt class="bread-name-anpan">あんぱん</dt>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
@@ -41,7 +41,7 @@
                     <img src="images/menu2.jpg" alt="クロワッサン">
                       <figcaption class="menu-commentary-box-left">
                         <dl class="menu-commentary-left">
-                          <dt class="bread-name">クロワッサン</dt>
+                          <dt class="bread-name-croissant">クロワッサン</dt>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
@@ -54,7 +54,7 @@
                     <img src="images/menu3.jpg" alt="食パン">
                       <figcaption class="menu-commentary-box-right">
                         <dl class="menu-commentary-right">
-                          <dt class="bread-name">食パン</dt>
+                          <dt class="bread-name-plain-bread">食パン</dt>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
@@ -65,9 +65,9 @@
 
                   <figure class="sweet-bread">
                     <img src="images/menu4.jpg" alt="菓子パン">
-                      <figcaption class="menu-commentary-box-left">
+                      <figcaption class="menu-commentary-box-left-sweet-bread">
                         <dl class="menu-commentary-left">
-                          <dt class="bread-name">菓子パン</dt>
+                          <dt class="bread-name-sweet-bread">菓子パン</dt>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
                           <dd>テキストが入ります。テキストが入ります。テキストが入ります。</dd>
