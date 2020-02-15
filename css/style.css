@@ -279,6 +279,44 @@
   }
 }
 
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  color: #31251c;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    display: block;
+  }
+}
+
 .menu-wrapper-grid {
   width: 1080px;
   background: #fff;
@@ -288,14 +326,26 @@
   position: relative;
 }
 
-.menu-wrapper-grid::before {
-  content: none;
-  position: absolute;
+@media (max-width: 768px) {
+  .menu-wrapper-grid {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #ff7f50;
+  }
 }
 
 .menu-box {
   widows: 1060px;
   height: auto;
+  background-color: #ffffe0;
+}
+
+@media (max-width: 768px) {
+  .menu-box {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .menu-title {
@@ -319,6 +369,12 @@
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .menu-title::after {
+    left: 34%;
+  }
+}
+
 .menu-images {
   display: block;
 }
@@ -338,6 +394,15 @@
   margin-top: 50px;
 }
 
+@media (max-width: 768px) {
+  .anpan,
+  .plain-bread {
+    display: block;
+    width: 80%;
+    height: auto;
+  }
+}
+
 .croissant,
 .sweet-bread {
   width: 800px;
@@ -352,18 +417,36 @@
   margin-top: 50px;
 }
 
+@media (max-width: 768px) {
+  .croissant,
+  .sweet-bread {
+    display: block;
+    width: 80%;
+    height: auto;
+  }
+}
+
 .menu-commentary-box-right,
 .menu-commentary-box-left,
-.menu-commentary-box-sweet-bread {
+.menu-commentary-box-left-sweet-bread {
   width: 600px;
   height: 200px;
   text-align: start;
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .menu-commentary-box-right,
+  .menu-commentary-box-left,
+  .menu-commentary-box-left-sweet-bread {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .menu-commentary-box-right::after,
 .menu-commentary-box-left::after,
-.menu-commentary-box-sweet-bread::after {
+.menu-commentary-box-left-sweet-bread::after {
   content: '';
   position: absolute;
   background-color: #d0d0d0;
@@ -372,12 +455,36 @@
   border-radius: 9px;
 }
 
+@media (max-width: 768px) {
+  .menu-commentary-box-right::after,
+  .menu-commentary-box-left::after,
+  .menu-commentary-box-left-sweet-bread::after {
+    width: 100%;
+  }
+}
+
+.menu-commentary-box-left-sweet-bread::after {
+  content: none;
+}
+
 .menu-commentary-box-right::after {
   left: -250px;
 }
 
+@media (max-width: 768px) {
+  .menu-commentary-box-right::after {
+    left: 0;
+  }
+}
+
 .menu-commentary-box-left::after {
   left: -150px;
+}
+
+@media (max-width: 768px) {
+  .menu-commentary-box-left::after {
+    left: 0;
+  }
 }
 
 .menu-commentary-right,

@@ -1,3 +1,29 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  color: #31251c;
+  @include breakpoint( tablet ) {
+    overflow-x: hidden;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include breakpoint( sp ) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  @include breakpoint( sp ) {
+    display: block;
+  }
+}
 
 .menu-wrapper-grid {
   width: 1080px;
@@ -6,15 +32,22 @@
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
-    &::before {
-      content: none;
-        position: absolute;
-    }
+  @include breakpoint( tablet ) {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #ff7f50;
+  }
 }
 
   .menu-box {
     widows: 1060px;
     height: auto;
+    background-color: #ffffe0;
+    @include breakpoint( tablet ) {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 
     .menu-title {
@@ -35,6 +68,9 @@
         top: 32px;
         left: 465px;
         display: inline-block;
+        @include breakpoint( tablet ) {
+          left: 34%;
+        }
       }
     }
     
@@ -53,6 +89,11 @@
       display: flex;
       margin: 0 auto;
       margin-top: 50px;
+      @include breakpoint( tablet ) {
+        display: block;
+        width: 80%;
+        height: auto;
+      }
     }
 
     .croissant,
@@ -62,42 +103,66 @@
       flex-direction: row-reverse;
       margin: 0 auto;
       margin-top: 50px;
+      @include breakpoint( tablet ) {
+        display: block;
+        width: 80%;
+        height: auto;
+      }
     }
 
       .menu-commentary-box-right,
-        .menu-commentary-box-left,
-        .menu-commentary-box-sweet-bread {
-          width: 600px;
-          height: 200px;
-          text-align: start;
-          position: relative;
-          &::after {
-            content: '';
-            position: absolute;
-            background-color: #d0d0d0;
-            width: 1000px;
-            height: 2px;
-            border-radius: 9px;
+      .menu-commentary-box-left,
+      .menu-commentary-box-left-sweet-bread {
+        width: 600px;
+        height: 200px;
+        text-align: start;
+        position: relative;
+        @include breakpoint( tablet ) {
+          width: 100%;
+          margin: 0 auto;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: #d0d0d0;
+          width: 1000px;
+          height: 2px;
+          border-radius: 9px;
+          @include breakpoint( tablet ) {
+            width: 100%;
           }
         }
+      }
+      .menu-commentary-box-left-sweet-bread { // 灰色下線を非表示
+        &::after {
+          content: none;
+        }
+      }
+
       .menu-commentary-box-right {
-          &::after {
-            left: -250px;
+        &::after {
+          left: -250px;
+          @include breakpoint( tablet ) {
+            left: 0;
           }
+        }
       }
       .menu-commentary-box-left {
         &::after {
           left: -150px;
+          @include breakpoint( tablet ) {
+            left: 0;
+          }
         }
-        
       }
+      
 
         .menu-commentary-right,
-          .menu-commentary-left {
-            display: flex;
-            flex-direction: column;
-            height: 150px;
-            margin-top: 40px;
+        .menu-commentary-left {
+          display: flex;
+          flex-direction: column;
+          height: 150px;
+          margin-top: 40px;
         }
         .menu-commentary-right {
           margin-left: 100px;
@@ -106,17 +171,17 @@
         }
 
         
-              .bread-name-anpan,
-              .bread-name-croissant,
-              .bread-name-plain-bread,
-              .bread-name-sweet-bread {
-                font-size: 1.5em;
-                width: 200px;
-              }
+          .bread-name-anpan,
+          .bread-name-croissant,
+          .bread-name-plain-bread,
+          .bread-name-sweet-bread {
+            font-size: 1.5em;
+            width: 200px;
+          }
 
-              dd {
-                margin: 0;
-              }
+            dd {
+              margin: 0;
+            }
               
 
               
@@ -125,4 +190,3 @@
 
             
         
-    
