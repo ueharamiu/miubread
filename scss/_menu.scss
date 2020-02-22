@@ -20,18 +20,29 @@ body {
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
+  @include breakpoint( tablet ) {
+    max-width: 100%;
+    min-width: 261px;
+  }
   @include breakpoint( sp ) {
     display: block;
   }
 }
 
-.menu-wrapper-grid {
+.contents {
   width: 1080px;
-  background: #fff;
+  @include breakpoint( tablet ) {
+    background-color: pink;
+    width: 100%;
+  }
+}
+
+.menu-wrapper-grid {
+  width: 1060px;
+  background-color: #000;
   height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  position: relative;
   @include breakpoint( tablet ) {
     width: 100%;
     height: auto;
@@ -53,7 +64,7 @@ body {
     .menu-title {
       font-size: 20px;
       text-align: center;
-      margin-top: 26px;
+      /* margin-top: 26px; */
       margin-bottom: 10px;
       color: #31251c;
       position: relative;
@@ -70,6 +81,10 @@ body {
         display: inline-block;
         @include breakpoint( tablet ) {
           left: 34%;
+        }
+        @include breakpoint( sp ) {
+          width: 50%;
+          left: 25%;
         }
       }
     }
@@ -93,6 +108,7 @@ body {
         display: block;
         width: 80%;
         height: auto;
+        margin-top: 20%;
       }
     }
 
@@ -107,6 +123,7 @@ body {
         display: block;
         width: 80%;
         height: auto;
+        margin-top: 20%;
       }
     }
 
@@ -144,6 +161,7 @@ body {
           left: -250px;
           @include breakpoint( tablet ) {
             left: 0;
+            margin-top: 10%;
           }
         }
       }
@@ -152,6 +170,7 @@ body {
           left: -150px;
           @include breakpoint( tablet ) {
             left: 0;
+            margin-top: 10%;
           }
         }
       }
@@ -163,11 +182,20 @@ body {
           flex-direction: column;
           height: 150px;
           margin-top: 40px;
+          @include breakpoint( tablet ) {
+            margin-top: initial;
+            margin-bottom: 15%;
+          }
         }
         .menu-commentary-right {
           margin-left: 100px;
           height: 150px;
           margin-top: 40px;
+          @include breakpoint( tablet ) {
+            margin-left: initial;
+            margin-top: initial;
+            margin-bottom: 15%;
+          }
         }
 
         
@@ -177,6 +205,12 @@ body {
           .bread-name-sweet-bread {
             font-size: 1.5em;
             width: 200px;
+            @include breakpoint( tablet ) {
+              margin: 0 auto;
+              margin-top: 5%;
+              margin-bottom: 5%;
+              text-align: center;
+            }
           }
 
             dd {

@@ -15,8 +15,11 @@
 
 <?php
   require('./common/header.php');
-?>    
+?>  
 
+  </head>
+
+  
       <div class="wrapper">
         <div class="contents">
           <article>
@@ -92,5 +95,4 @@
 ?>
 
     </body>
-
 </html>
