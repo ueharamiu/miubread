@@ -15,7 +15,7 @@
       });
     });
     </script>
-  </head>
+  
 
     <body>
       <div id="header">
