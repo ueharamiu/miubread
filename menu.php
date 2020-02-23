@@ -21,7 +21,7 @@
 
   
       <div class="wrapper">
-        <div class="contents">
+        <div class="contents-menu">
           <article>
             <div class="menu-wrapper-grid">
               <section class="menu-box">
@@ -82,7 +82,7 @@
               </section> <!-- .menu-box -->
             </div> <!-- menu-wrapper-grid -->
           </article>
-        </div> <!-- .contents-->
+        </div> <!-- .contents-menu-->
 
 <?php
   require('./common/sidebar.php');

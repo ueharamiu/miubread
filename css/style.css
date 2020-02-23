@@ -324,20 +324,24 @@ body {
   }
 }
 
-.contents {
+.contents-menu {
   width: 1080px;
 }
 
 @media (max-width: 768px) {
-  .contents {
-    background-color: pink;
+  .contents-menu {
+    width: 199%;
+  }
+}
+
+@media (max-width: 320px) {
+  .contents-menu {
     width: 100%;
   }
 }
 
 .menu-wrapper-grid {
   width: 1060px;
-  background-color: #000;
   height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -348,27 +352,28 @@ body {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    background-color: #ff7f50;
   }
 }
 
 .menu-box {
   widows: 1060px;
   height: auto;
-  background-color: #ffffe0;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 @media (max-width: 768px) {
   .menu-box {
     width: 90%;
     margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 }
 
 .menu-title {
   font-size: 20px;
   text-align: center;
-  /* margin-top: 26px; */
   margin-bottom: 10px;
   color: #31251c;
   position: relative;
@@ -382,13 +387,14 @@ body {
   height: 3px;
   border-radius: 9px;
   top: 32px;
-  left: 465px;
+  left: 455px;
   display: inline-block;
 }
 
 @media (max-width: 768px) {
   .menu-title::after {
-    left: 34%;
+    width: 25%;
+    left: 37.5%;
   }
 }
 
@@ -415,7 +421,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 
 @media (max-width: 768px) {
@@ -424,7 +430,8 @@ body {
     display: block;
     width: 80%;
     height: auto;
-    margin-top: 20%;
+    margin-top: 10%;
+    padding-top: 10%;
   }
 }
 
@@ -439,7 +446,7 @@ body {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   margin: 0 auto;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 
 @media (max-width: 768px) {
@@ -448,7 +455,8 @@ body {
     display: block;
     width: 80%;
     height: auto;
-    margin-top: 20%;
+    margin-top: 10%;
+    padding-top: 10%;
   }
 }
 
@@ -458,6 +466,7 @@ body {
   width: 600px;
   height: 200px;
   text-align: start;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -572,6 +581,19 @@ body {
 
 dd {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  dd {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  dd {
+    text-align: start;
+  }
 }
 
 #location {
